@@ -1,0 +1,2 @@
+-- Shared stub included by sinco-core (@sinco-ac/init.lua).
+-- Detections live in src/; this file only exists so core can start cleanly.
