@@ -1,0 +1,52 @@
+<CVehicleModelInfoVariation>
+  <variationData>
+      <Item>
+          <modelName>biggestbird</modelName>
+          <colors>
+              <Item>
+                <indices content="char_array">
+                  111011
+                </indices>
+                <liveries>
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                </liveries>
+              </Item>
+              <Item>
+                <indices content="char_array">
+                  1471072156128
+                </indices>
+                <liveries>
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                    <Item value="false" />
+                </liveries>
+              </Item>
+          </colors>
+          <kits>
+              <Item>4574_biggestbird_modkit</Item>
+          </kits>
+          <plateProbabilities>
+              <Probabilities>
+                  <Item>
+                      <Name>Standard White</Name>
+                      <Value value="100.0" />
+                  </Item>
+              </Probabilities>
+          </plateProbabilities>
+          <lightSettings value="1" />
+          <sirenSettings value="0" />
+      </Item>
+    </variationData>
+</CVehicleModelInfoVariation>

@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVarGlobal> 
+  <Kits>
+    <Item>
+        <kitName>9090_x6kwk_modkit</kitName>
+        <id value="9090" />
+        <kitType>MKT_SPECIAL</kitType>
+        <visibleMods>
+            <Item>
+                <modelName>x6p1</modelName>
+                <modShopLabel>x6p1</modShopLabel>
+                <type>VMT_PLTHOLDER</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6p2</modelName>
+                <modShopLabel>x6p2</modShopLabel>
+                <type>VMT_PLTHOLDER</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_arch1</modelName>
+                <modShopLabel>X6_ARCH1</modShopLabel>
+                <type>VMT_CHASSIS</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="3" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_arch1ldoor</modelName>
+                <modShopLabel>X6_LDOORARCH</modShopLabel>
+                <type>VMT_CHASSIS2</type>
+                <bone>door_dside_r</bone>
+                <collisionBone>door_dside_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="3" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_arch1rdoor</modelName>
+                <modShopLabel>X6_RDOORARCH</modShopLabel>
+                <type>VMT_CHASSIS3</type>
+                <bone>door_pside_r</bone>
+                <collisionBone>door_pside_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="3" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_arch2</modelName>
+                <modShopLabel>X6_ARCH2</modShopLabel>
+                <type>VMT_CHASSIS</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="3" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_arch2ldoor</modelName>
+                <modShopLabel>X6_LDOORARCH</modShopLabel>
+                <type>VMT_CHASSIS2</type>
+                <bone>door_dside_r</bone>
+                <collisionBone>door_dside_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="3" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_arch2rdoor</modelName>
+                <modShopLabel>X6_RDOORARCH</modShopLabel>
+                <type>VMT_CHASSIS3</type>
+                <bone>door_pside_r</bone>
+                <collisionBone>door_pside_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="3" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_arch3</modelName>
+                <modShopLabel>X6_ARCH1</modShopLabel>
+                <type>VMT_CHASSIS</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="3" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_arch3ldoor</modelName>
+                <modShopLabel>X6_LDOORARCH</modShopLabel>
+                <type>VMT_CHASSIS2</type>
+                <bone>door_dside_r</bone>
+                <collisionBone>door_dside_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="3" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_arch3rdoor</modelName>
+                <modShopLabel>X6_RDOORARCH</modShopLabel>
+                <type>VMT_CHASSIS3</type>
+                <bone>door_pside_r</bone>
+                <collisionBone>door_pside_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="3" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spoil1</modelName>
+                <modShopLabel>x6kwk_spoil1</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_e</Item>
+                </turnOffBones>
+                <type>VMT_SPOILER</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spoil2</modelName>
+                <modShopLabel>x6kwk_spoil2</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_e</Item>
+                </turnOffBones>
+                <type>VMT_SPOILER</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spoil3</modelName>
+                <modShopLabel>x6kwk_spoil3</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_e</Item>
+                </turnOffBones>
+                <type>VMT_SPOILER</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_bon1</modelName>
+                <modShopLabel>x6kwk_bon1</modShopLabel>
+                <turnOffBones>
+                    <Item>bonnet</Item>
+                </turnOffBones>
+                <type>VMT_BONNET</type>
+                <bone>bonnet</bone>
+                <collisionBone>bonnet</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_bon2</modelName>
+                <modShopLabel>x6kwk_bon2</modShopLabel>
+                <turnOffBones>
+                    <Item>bonnet</Item>
+                </turnOffBones>
+                <type>VMT_BONNET</type>
+                <bone>bonnet</bone>
+                <collisionBone>bonnet</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_bon3</modelName>
+                <modShopLabel>x6kwk_bon3</modShopLabel>
+                <turnOffBones>
+                    <Item>bonnet</Item>
+                </turnOffBones>
+                <type>VMT_BONNET</type>
+                <bone>bonnet</bone>
+                <collisionBone>bonnet</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_skirt</modelName>
+                <modShopLabel>x6kwk_skirt</modShopLabel>
+                <type>VMT_SKIRT</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif1</modelName>
+                <modShopLabel>x6kwk_dif1</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif2</modelName>
+                <modShopLabel>x6kwk_dif2</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif3</modelName>
+                <modShopLabel>x6kwk_dif3</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif4</modelName>
+                <modShopLabel>x6kwk_dif4</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif5</modelName>
+                <modShopLabel>x6kwk_dif5</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif6</modelName>
+                <modShopLabel>x6kwk_dif6</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif7</modelName>
+                <modShopLabel>x6kwk_dif7</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif8</modelName>
+                <modShopLabel>x6kwk_dif8</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif9</modelName>
+                <modShopLabel>x6kwk_dif9</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_dif10</modelName>
+                <modShopLabel>x6kwk_dif10</modShopLabel>
+                <type>VMT_CHASSIS4</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_bumpr1</modelName>
+                <modShopLabel>x6kwk_bumpr1</modShopLabel>
+                <turnOffBones>
+                    <Item>bumper_r</Item>
+                </turnOffBones>
+                <type>VMT_BUMPER_R</type>
+                <bone>chassis</bone>
+                <collisionBone>bumper_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_bumpr2</modelName>
+                <modShopLabel>x6kwk_bumpr2</modShopLabel>
+                <turnOffBones>
+                    <Item>bumper_r</Item>
+                </turnOffBones>
+                <type>VMT_BUMPER_R</type>
+                <bone>chassis</bone>
+                <collisionBone>bumper_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_bumpr3</modelName>
+                <modShopLabel>x6kwk_bumpr3</modShopLabel>
+                <turnOffBones>
+                    <Item>bumper_r</Item>
+                </turnOffBones>
+                <type>VMT_BUMPER_R</type>
+                <bone>chassis</bone>
+                <collisionBone>bumper_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_bumpr4</modelName>
+                <modShopLabel>x6kwk_bumpr4</modShopLabel>
+                <turnOffBones>
+                    <Item>bumper_r</Item>
+                </turnOffBones>
+                <type>VMT_BUMPER_R</type>
+                <bone>chassis</bone>
+                <collisionBone>bumper_r</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_bumpf1</modelName>
+                <modShopLabel>x6kwk_bumpf1</modShopLabel>
+                <turnOffBones>
+                    <Item>bumper_f</Item>
+                </turnOffBones>
+                <type>VMT_BUMPER_F</type>
+                <bone>bodyshell</bone>
+                <collisionBone>bumper_f</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_bumpf2</modelName>
+                <modShopLabel>x6kwk_bumpf2</modShopLabel>
+                <turnOffBones>
+                    <Item>bumper_f</Item>
+                </turnOffBones>
+                <type>VMT_BUMPER_F</type>
+                <bone>bodyshell</bone>
+                <collisionBone>bumper_f</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spl1</modelName>
+                <modShopLabel>x6kwk_spl1</modShopLabel>
+                <type>VMT_CHASSIS5</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spl2</modelName>
+                <modShopLabel>x6kwk_spl2</modShopLabel>
+                <type>VMT_CHASSIS5</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spl3</modelName>
+                <modShopLabel>x6kwk_spl3</modShopLabel>
+                <type>VMT_CHASSIS5</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spl4</modelName>
+                <modShopLabel>x6kwk_spl4</modShopLabel>
+                <type>VMT_CHASSIS5</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spl5</modelName>
+                <modShopLabel>x6kwk_spl5</modShopLabel>
+                <type>VMT_CHASSIS5</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spl6</modelName>
+                <modShopLabel>x6kwk_spl6</modShopLabel>
+                <type>VMT_CHASSIS5</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spl7</modelName>
+                <modShopLabel>x6kwk_spl7</modShopLabel>
+                <type>VMT_CHASSIS5</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spl8</modelName>
+                <modShopLabel>x6kwk_spl8</modShopLabel>
+                <type>VMT_CHASSIS5</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_spl9</modelName>
+                <modShopLabel>x6kwk_spl9</modShopLabel>
+                <type>VMT_CHASSIS5</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_exh1</modelName>
+                <modShopLabel>x6kwk_exh1</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_a</Item>
+                    <Item>exhaust</Item>
+                    <Item>exhaust_2</Item>
+                    <Item>exhaust_3</Item>
+                    <Item>exhaust_4</Item>
+                </turnOffBones>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_exh2</modelName>
+                <modShopLabel>x6kwk_exh2</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_a</Item>
+                    <Item>exhaust</Item>
+                    <Item>exhaust_2</Item>
+                    <Item>exhaust_3</Item>
+                    <Item>exhaust_4</Item>
+                </turnOffBones>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_exh3</modelName>
+                <modShopLabel>x6kwk_exh3</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_a</Item>
+                    <Item>exhaust</Item>
+                    <Item>exhaust_2</Item>
+                    <Item>exhaust_3</Item>
+                    <Item>exhaust_4</Item>
+                </turnOffBones>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_exh4</modelName>
+                <modShopLabel>x6kwk_exh4</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_a</Item>
+                    <Item>exhaust</Item>
+                    <Item>exhaust_2</Item>
+                    <Item>exhaust_3</Item>
+                    <Item>exhaust_4</Item>
+                </turnOffBones>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_exh5</modelName>
+                <modShopLabel>x6kwk_exh5</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_a</Item>
+                    <Item>exhaust</Item>
+                    <Item>exhaust_2</Item>
+                    <Item>exhaust_3</Item>
+                    <Item>exhaust_4</Item>
+                </turnOffBones>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_exh6</modelName>
+                <modShopLabel>x6kwk_exh6</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_a</Item>
+                    <Item>exhaust</Item>
+                    <Item>exhaust_2</Item>
+                    <Item>exhaust_3</Item>
+                    <Item>exhaust_4</Item>
+                </turnOffBones>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_exh7</modelName>
+                <modShopLabel>x6kwk_exh7</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_a</Item>
+                    <Item>exhaust</Item>
+                    <Item>exhaust_2</Item>
+                    <Item>exhaust_3</Item>
+                    <Item>exhaust_4</Item>
+                </turnOffBones>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_exh8</modelName>
+                <modShopLabel>x6kwk_exh8</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_a</Item>
+                    <Item>exhaust</Item>
+                    <Item>exhaust_2</Item>
+                    <Item>exhaust_3</Item>
+                    <Item>exhaust_4</Item>
+                </turnOffBones>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>x6kwk_exh9</modelName>
+                <modShopLabel>x6kwk_exh9</modShopLabel>
+                <turnOffBones>
+                    <Item>misc_a</Item>
+                    <Item>exhaust</Item>
+                    <Item>exhaust_2</Item>
+                    <Item>exhaust_3</Item>
+                    <Item>exhaust_4</Item>
+                </turnOffBones>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+        </visibleMods>
+        <statMods>
+            <Item>
+            <identifier />
+            <modifier value="25" />
+            <audioApply value="1.000000" />
+            <weight value="20" />
+            <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="50" />
+            <audioApply value="1.000000" />
+            <weight value="20" />
+            <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="75" />
+            <audioApply value="1.000000" />
+            <weight value="20" />
+            <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="100" />
+            <audioApply value="1.000000" />
+            <weight value="20" />
+            <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="25" />
+            <audioApply value="1.000000" />
+            <weight value="5" />
+            <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="65" />
+            <audioApply value="1.000000" />
+            <weight value="5" />
+            <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="100" />
+            <audioApply value="1.000000" />
+            <weight value="5" />
+            <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="25" />
+            <audioApply value="1.000000" />
+            <weight value="5" />
+            <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="50" />
+            <audioApply value="1.000000" />
+            <weight value="5" />
+            <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="100" />
+            <audioApply value="1.000000" />
+            <weight value="5" />
+            <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="20" />
+            <audioApply value="1.000000" />
+            <weight value="0" />
+            <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="40" />
+            <audioApply value="1.000000" />
+            <weight value="10" />
+            <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="60" />
+            <audioApply value="1.000000" />
+            <weight value="20" />
+            <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="80" />
+            <audioApply value="1.000000" />
+            <weight value="30" />
+            <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+            <identifier />
+            <modifier value="100" />
+            <audioApply value="1.000000" />
+            <weight value="40" />
+            <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="1" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="2" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="3" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="4" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+      </statMods>
+    </Item>
+  </Kits>
+  <Lights>
+    </Lights>
+</CVehicleModelInfoVarGlobal>

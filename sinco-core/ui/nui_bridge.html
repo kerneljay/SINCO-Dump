@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SINCO NUI</title>
+    <link rel="stylesheet" href="tutorial/styles.css?v=20260826charhide1" />
+    <link rel="stylesheet" href="username/index.css?v=20260820username6" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: transparent !important;
+        }
+        iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: transparent;
+            pointer-events: none;
+        }
+        iframe#main {
+            pointer-events: auto;
+        }
+        iframe.nui-interactive {
+            pointer-events: auto;
+            z-index: 20;
+        }
+            iframe#main { z-index: 1; }
+            iframe#deathui { z-index: 10; }
+        iframe#chat { z-index: 15; }
+        iframe#dispute { z-index: 18; }
+    </style>
+</head>
+<body>
+    <iframe id="main" src="index.html?v=20260820tutorial7" allowtransparency="true" tabindex="-1"></iframe>
+    <iframe id="deathui" src="deathui/index.html?v=20260826cmgstats2" allowtransparency="true"></iframe>
+    <iframe id="chat" src="../chat/dist/ui.html" allowtransparency="true"></iframe>
+    <iframe id="dispute" src="dispute/index.html?v=20260819jq2" allowtransparency="true"></iframe>
+
+    <div id="characterSelect" class="tutorial-container" style="display:none">
+        <div class="title-container">
+            <h1>WELCOME TO SINCO</h1>
+            <h2>Choose your character</h2>
+        </div>
+        <div class="select-container male-container" id="male">
+            <div class="image-container">
+                <img class="image" src="tutorial/img/male_image.png" alt="Male" id="maleImage">
+            </div>
+            <div class="gender">MALE</div>
+        </div>
+        <div class="select-container female-container" id="female">
+            <div class="image-container">
+                <img class="image" src="tutorial/img/female_image.png" alt="Female" id="femaleImage">
+            </div>
+            <div class="gender">FEMALE</div>
+        </div>
+    </div>
+
+    <div id="username_root">
+        <img src="tutorial/img/1bb690ed032c60daa653ac3479a13458.png" class="username-background" alt="" />
+        <div class="username-container">
+            <div class="username-box">
+                <h1>CHOOSE YOUR USERNAME</h1>
+                <h2>This will be your unique name going forward, visible to all players in-game.</h2>
+                <h2>You will not be able to change your name for free.</h2>
+                <h2>Minimum 3 characters, alphanumerics only.</h2>
+                <input class="username-interact username-input" id="username_input" type="text" maxlength="20" autocomplete="off" spellcheck="false" />
+                <p class="username-text username-invalid" id="username_invalid">This username is unavailable. [Must be between 3 and 20 characters].</p>
+                <button class="username-interact username-button" id="username_submit" type="button">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const frames = {
+            main: document.getElementById('main'),
+            deathui: document.getElementById('deathui'),
+            chat: document.getElementById('chat'),
+            dispute: document.getElementById('dispute'),
+        };
+
+        const characterSelectEl = document.getElementById('characterSelect');
+        const usernameRootEl = document.getElementById('username_root');
+        const usernameInputEl = document.getElementById('username_input');
+        const usernameInvalidEl = document.getElementById('username_invalid');
+        const usernameSubmitEl = document.getElementById('username_submit');
+        let characterSelectOpen = false;
+        let characterPicked = false;
+        let usernamePromptOpen = false;
+        let usernameSkipMinLength = false;
+        const blockedNames = ["amb","n/a","nigger","nigga","wog","coon","paki","faggot","anal","kys","homosexual","lesbian","suicide","negro","queef","queer","allahu akbar","terrorist","wanker","n1gger","f4ggot","n0nce","d1ck","h0m0","n1gg3r","h0m0s3xual","nazi","hitler"];
+
+        function nuiPost(eventName, data) {
+            const resource = (typeof GetParentResourceName === "function") ? GetParentResourceName() : "sinco-core";
+            return fetch("https://" + resource + "/" + eventName, {
+                method: "POST",
+                headers: { "Content-Type": "application/json; charset=UTF-8" },
+                body: JSON.stringify(data || {})
+            });
+        }
+
+        function isValidUsernameFormat(username) {
+            const trimmed = (username || "").replace(/^\s+|\s+$/g, "");
+            const minLength = usernameSkipMinLength ? 1 : 3;
+            if (trimmed.length < minLength || trimmed.length > 20) return false;
+            if (!/^[A-Za-z0-9]+$/.test(trimmed)) return false;
+            return true;
+        }
+
+        function setUsernamePromptVisible(show, skipMinLength) {
+            usernamePromptOpen = !!show;
+            if (skipMinLength !== undefined) usernameSkipMinLength = !!skipMinLength;
+            if (!usernameRootEl) return;
+            if (show) {
+                usernameRootEl.classList.add("username-open");
+                if (usernameInputEl) usernameInputEl.value = "";
+                if (usernameInvalidEl) {
+                    usernameInvalidEl.style.display = "block";
+                    usernameInvalidEl.className = "username-text username-invalid";
+                    usernameInvalidEl.textContent = "";
+                }
+                setTimeout(() => {
+                    try { if (usernameInputEl) usernameInputEl.focus(); } catch (e) {}
+                }, 50);
+            } else {
+                usernameRootEl.classList.remove("username-open");
+            }
+        }
+
+        function setUsernameStatus(status, text) {
+            if (!usernameInvalidEl || !text) return;
+            usernameInvalidEl.style.display = "block";
+            usernameInvalidEl.className = status === "valid" ? "username-text username-valid" : "username-text username-invalid";
+            usernameInvalidEl.textContent = text;
+        }
+
+        function submitChosenUsername() {
+            if (!usernameInputEl) return;
+            const username = usernameInputEl.value;
+            if (blockedNames.includes(username.toLowerCase().replace(/^\s+|\s+$/g, ""))) {
+                usernameInvalidEl.style.display = "block";
+                usernameInvalidEl.className = "username-text username-invalid";
+                usernameInvalidEl.textContent = "This username is forbidden.";
+                return;
+            }
+            if (isValidUsernameFormat(username)) {
+                nuiPost("submitUsername", { username: username });
+            } else {
+                usernameInvalidEl.style.display = "block";
+                usernameInvalidEl.className = "username-text username-invalid";
+                usernameInvalidEl.textContent = "This username is unavailable. [Must be between 3 and 20 characters].";
+            }
+        }
+
+        if (usernameInputEl) {
+            usernameInputEl.addEventListener("input", function() {
+                usernameInvalidEl.style.display = "block";
+                usernameInvalidEl.className = "username-text username-pending";
+                usernameInvalidEl.textContent = "Checking username status...";
+                clearTimeout(this.validationTimeout);
+                this.validationTimeout = setTimeout(() => {
+                    const username = usernameInputEl.value;
+                    if (!isValidUsernameFormat(username)) {
+                        usernameInvalidEl.className = "username-text username-invalid";
+                        usernameInvalidEl.textContent = "This username is unavailable. [Must be between 3 and 20 characters].";
+                        return;
+                    }
+                    if (blockedNames.includes(username.toLowerCase().replace(/^\s+|\s+$/g, ""))) {
+                        usernameInvalidEl.className = "username-text username-invalid";
+                        usernameInvalidEl.textContent = "This username is forbidden.";
+                        return;
+                    }
+                    nuiPost("checkUsername", { username: username });
+                }, 400);
+            });
+            usernameInputEl.addEventListener("keydown", function(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    submitChosenUsername();
+                }
+            });
+        }
+
+        if (usernameSubmitEl) {
+            usernameSubmitEl.addEventListener("click", submitChosenUsername);
+        }
+
+        function setCharacterSelectVisible(show) {
+            characterSelectOpen = !!show;
+            if (!characterSelectEl) return;
+            if (show) {
+                characterPicked = false;
+                characterSelectEl.classList.add('tutorial-open');
+                characterSelectEl.style.removeProperty('display');
+            } else {
+                characterSelectEl.classList.remove('tutorial-open');
+                characterSelectEl.style.setProperty('display', 'none', 'important');
+            }
+        }
+
+        function pickCharacter(eventName) {
+            if (characterPicked) return;
+            characterPicked = true;
+            setCharacterSelectVisible(false);
+            nuiPost(eventName, {});
+        }
+
+        if (characterSelectEl) {
+            const male = document.getElementById('male');
+            const female = document.getElementById('female');
+            if (male) male.addEventListener('click', function () { pickCharacter('SINCO:pickMale'); });
+            if (female) female.addEventListener('click', function () { pickCharacter('SINCO:pickFemale'); });
+            setCharacterSelectVisible(false);
+        }
+
+        const deathTypes = new Set([
+            'APP_TOGGLE',
+            'SET_CROSSHAIR',
+            'SHOW_DEATH_SCREEN',
+            'RESPAWN_KEY_PRESSED',
+            'DEATH_SCREEN_NHS_CALLED',
+            'SET_SPAWN_LOCATIONS',
+            'SET_SELECTED_SPAWN',
+            'RESPAWN_BUTTON_CLICK',
+            'SET_STATS',
+        ]);
+
+        const disputeTypes = new Set([
+            'toggleDisputeSystem',
+            'RefreshDispute',
+            'newMessage',
+            'showmessageNotification',
+        ]);
+
+        const chatTypes = new Set([
+            'ON_MESSAGE',
+            'ON_SUGGESTION_ADD',
+            'ON_SUGGESTION_REMOVE',
+            'ON_SUGGESTIONS_ADD',
+            'ON_MODE_ADD',
+            'ON_MODE_REMOVE',
+            'ON_MODE_REMOVE_ALL',
+            'ON_MODE_SET_GLOBAL',
+            'ON_TEMPLATE_ADD',
+            'ON_CLEAR',
+            'ON_UPDATE_THEMES',
+            'ON_OPEN',
+            'ON_SCREEN_STATE_CHANGE',
+            'UPDATE_PLAYERS',
+        ]);
+
+        let interactiveFrameId = 'main';
+
+        function focusFrame(frameId) {
+            const target = frames[frameId] || frames.main;
+            if (!target) return;
+            try { target.focus(); } catch (err) {}
+            try { target.contentWindow && target.contentWindow.focus(); } catch (err) {}
+        }
+
+        function setInteractive(frameId) {
+            interactiveFrameId = frameId || 'main';
+            Object.keys(frames).forEach((id) => {
+                const frame = frames[id];
+                if (!frame) return;
+                if (id === 'main') {
+                    frame.classList.toggle('nui-interactive', interactiveFrameId === 'main');
+                    frame.style.pointerEvents = (interactiveFrameId === 'main') ? 'auto' : 'none';
+                } else {
+                    const active = interactiveFrameId === id;
+                    frame.classList.toggle('nui-interactive', active);
+                    frame.style.pointerEvents = active ? 'auto' : 'none';
+                }
+            });
+            requestAnimationFrame(() => focusFrame(interactiveFrameId));
+        }
+
+        function postTo(frameId, data) {
+            const frame = frames[frameId];
+            if (!frame || !frame.contentWindow) return;
+            try {
+                frame.contentWindow.postMessage(data, '*');
+            } catch (err) {}
+        }
+
+        function targetsFor(data) {
+            const type = data && data.type;
+            const targets = new Set();
+
+            if (!type || typeof type !== 'string') {
+                targets.add('main');
+                if (data.updateCmgMic || data.moneyTalking === true || data.moneyTalking === false) {
+                    targets.add('deathui');
+                }
+                return targets;
+            }
+
+            if (deathTypes.has(type) || data.page === 'deathscreen') {
+                targets.add('deathui');
+            }
+            if (disputeTypes.has(type)) {
+                targets.add('dispute');
+            }
+            if (chatTypes.has(type) || type.indexOf('ON_') === 0) {
+                targets.add('chat');
+            }
+
+            if (!deathTypes.has(type) && !disputeTypes.has(type) && !chatTypes.has(type) && type.indexOf('ON_') !== 0) {
+                targets.add('main');
+            }
+
+            if (targets.size === 0) {
+                targets.add('main');
+            }
+
+            return targets;
+        }
+
+        window.addEventListener('message', (event) => {
+            const data = event.data;
+            if (!data || typeof data !== 'object') return;
+
+            if (data.type === 'characterSelect') {
+                setCharacterSelectVisible(!!data.show);
+                return;
+            }
+
+            if (data.type === 'username') {
+                if (data.show === true) {
+                    setUsernamePromptVisible(true, data.skipMinLength);
+                    return;
+                }
+                if (data.show === false) {
+                    setUsernamePromptVisible(false);
+                    return;
+                }
+                if (data.text) {
+                    setUsernameStatus(data.status, data.text);
+                }
+                return;
+            }
+
+            if (data.tutorialPick) {
+                pickCharacter(data.tutorialPick);
+                return;
+            }
+
+            if (data.sincoBridge === true) {
+                if (data.focusFrame !== undefined) {
+                    setInteractive(data.focusFrame || 'main');
+                }
+                if (!data.type) return;
+            }
+
+            if (data.type === 'updateInventory' && data.show) {
+                setInteractive('main');
+            }
+
+            if (data.type === 'sincoTogglePauseMenu' && data.toggle === true) {
+                setInteractive('main');
+            }
+
+            if (data.showPlayerList === true) {
+                setInteractive('main');
+            }
+            if (data.hidePlayerList === true) {
+                setInteractive('main');
+            }
+
+            const sources = Object.values(frames).map((f) => f.contentWindow);
+            if (sources.includes(event.source)) {
+                return;
+            }
+
+            targetsFor(data).forEach((id) => postTo(id, data));
+        });
+
+        window.addEventListener('keydown', (event) => {
+            if (characterSelectOpen || usernamePromptOpen) return;
+
+            const target = frames[interactiveFrameId] || frames.main;
+            if (!target || !target.contentWindow) return;
+
+            if (event.key === 'Home' || event.keyCode === 36 || event.which === 36) {
+                event.preventDefault();
+                target.contentWindow.postMessage({ type: 'sincoBridgeKey', key: 'Home' }, '*');
+                return;
+            }
+
+            if (event.key === 'Escape' || event.key === 'Esc' || event.keyCode === 27) {
+                target.contentWindow.postMessage({ type: 'sincoBridgeKey', key: 'Escape' }, '*');
+            }
+        });
+    </script>
+</body>
+</html>

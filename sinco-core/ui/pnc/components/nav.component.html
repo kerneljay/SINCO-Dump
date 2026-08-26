@@ -1,0 +1,6 @@
+<div class="personNav">
+    <p class="inlinep navp" v-bind:class="{ isActive: $parent.page == 'personsearch' }" v-on:click="$parent.switchPage('personsearch')">Lookup</p>
+    <p class="inlinep navp" v-bind:class="{ isActive: $parent.page == 'new-fines' }" v-on:click="$parent.switchPage('new-fines')">New Fine</p>
+    <p class="inlinep navp" v-bind:class="{ isActive: $parent.page == 'oldfines' }" v-on:click="$parent.switchPage('oldfines')">Fines</p>
+    <p class="inlinep navp" v-bind:class="{ isActive: $parent.page == 'dvsa' }" v-on:click="$parent.switchPage('dvsa')">DVSA</p>
+</div>

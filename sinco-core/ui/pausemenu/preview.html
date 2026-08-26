@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINCO Pause Menu Preview</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Poppins");
+        @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --sincoHover: rgba(33, 255, 225, 0.6);
+            --sincoSecondGr: rgba(33, 255, 225, 0.3);
+            --sincoMainGr: rgba(33, 255, 225, 1);
+            --sincoHoverGr: rgba(0, 160, 152, 0.315);
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+            background-color: #000000;
+        }
+        #sincoRoot {
+            width: 100vw;
+            height: 100vh;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            display: block;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+        #sincoOverlay {
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            background-image: url("assets/sincoBackground.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        #sincoLogo {
+            position: fixed;
+            width: 8.542vw;
+            height: 8.708vw;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+        }
+        #sincoPauseM {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .sinco-view {
+            display: none;
+            width: 100%;
+            height: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .sinco-view.active {
+            display: flex;
+            opacity: 1;
+            position: relative;
+        }
+        #sincoSidebar {
+            width: 380px;
+            height: 100vh;
+            background: linear-gradient(to top, rgba(255, 182, 193, 0.15), rgba(24, 27, 32, 0.95));
+            border-left: 2px solid rgba(255, 182, 193, 0.4);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 182, 193, 0.5) rgba(0, 0, 0, 0.3);
+        }
+        #sincoSidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        #sincoSidebar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+        }
+        #sincoSidebar::-webkit-scrollbar-thumb {
+            background: rgba(255, 182, 193, 0.5);
+            border-radius: 3px;
+        }
+        #sincoSidebar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 182, 193, 0.7);
+        }
+        .sinco-sidebar-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 182, 193, 0.3);
+            margin-bottom: 15px;
+        }
+        .sinco-sidebar-pfp {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(24, 27, 32, 0.3);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .sinco-sidebar-pfp img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .sinco-sidebar-player-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .sinco-sidebar-username {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 16px;
+            color: #ffffff;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .sinco-info-player-label {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: none;
+        }
+        .sinco-sidebar-username span:last-child {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 16px;
+            color: #ffffff;
+        }
+        .sinco-sidebar-date {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .sinco-sidebar-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .sinco-sidebar-stat {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 182, 193, 0.2);
+            transition: all 0.2s ease;
+            gap: 8px;
+        }
+        .sinco-sidebar-stat:hover {
+            background: rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 182, 193, 0.4);
+        }
+        .sinco-sidebar-stat-label {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .sinco-sidebar-stat-value {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 13px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .sinco-sidebar-stat-unit {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 1);
+        }
+        .sinco-sidebar-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 0 1 auto;
+        }
+        .sinco-sidebar-btn {
+            position: relative;
+            width: 100%;
+            height: 60px;
+            min-height: 60px;
+            background: rgba(24, 27, 32, 0.8);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 182, 193, 0.4);
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .sinco-sidebar-btn:hover {
+            background: rgba(24, 27, 32, 0.95);
+            border-color: rgba(255, 182, 193, 0.6);
+            transform: translateX(-3px);
+            box-shadow: 0 0 15px rgba(255, 182, 193, 0.5), 0 0 30px rgba(255, 182, 193, 0.3);
+        }
+        .sinco-sidebar-btn-line {
+            position: absolute;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+            transition: opacity 0.2s ease;
+            opacity: 0;
+        }
+        .sinco-sidebar-btn:hover .sinco-sidebar-btn-line {
+            opacity: 1;
+        }
+        .sinco-sidebar-btn-icon {
+            width: 32px;
+            height: 32px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 12px;
+            filter: brightness(1.1);
+            transition: transform 0.2s ease;
+            z-index: 1;
+            flex-shrink: 0;
+        }
+        .sinco-sidebar-btn:hover .sinco-sidebar-btn-icon {
+            transform: scale(1.1);
+        }
+        .sinco-sidebar-btn-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+        .sinco-sidebar-btn-text h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 15px;
+            color: #ffffff;
+            margin: 0;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .sinco-sidebar-btn-text h2 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+        .sinco-sidebar-footer {
+            margin-top: 10px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 182, 193, 0.2);
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+        }
+        .sinco-sidebar-footer-text {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .sinco-sidebar-footer-text strong {
+            font-family: 'Rajdhani', sans-serif;
+            color: rgba(255, 182, 193, 0.9);
+        }
+        /* Middle Player Container */
+        .sinco-middle-player-container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 70vh;
+            background: linear-gradient(to top, rgba(255, 182, 193, 0.15), rgba(24, 27, 32, 0.95));
+            border: 2px solid rgba(255, 182, 193, 0.4);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+        .sinco-middle-player-container .player-text {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 32px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+        .sinco-middle-player-container .emote-text {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="sincoRoot">
+        <div id="sincoOverlay">
+            <div id="sincoLogo"></div>
+            <div id="sincoPauseM">
+                <!-- Main Menu View -->
+                <div id="sincoMainMenu" class="sinco-view active">
+                    <!-- Middle Player Container -->
+                    <div class="sinco-middle-player-container">
+                        <div class="player-text">Player</div>
+                        <div class="emote-text">Think 2 Emote</div>
+                    </div>
+                    <!-- Right Sidebar -->
+                    <div id="sincoSidebar" class="sinco-sidebar">
+                        <!-- Profile Section -->
+                        <div class="sinco-sidebar-profile">
+                            <div class="sinco-sidebar-pfp">
+                                PFP
+                            </div>
+                            <div class="sinco-sidebar-player-info">
+                                <h2 class="sinco-sidebar-username">
+                                    <span class="sinco-info-player-label">Username:</span>
+                                    <span id="sincoPlrName">Player Name</span>
+                                </h2>
+                                <div class="sinco-sidebar-date" id="todaysDate">26/02/2024</div>
+                            </div>
+                        </div>
+
+                        <!-- Stats Section -->
+                        <div class="sinco-sidebar-stats">
+                            <div class="sinco-sidebar-stat">
+                                <span class="sinco-sidebar-stat-label">ID:</span>
+                                <span class="sinco-sidebar-stat-value" id="sincoDGender">1</span>
+                            </div>
+                            <div class="sinco-sidebar-stat">
+                                <span class="sinco-sidebar-stat-label">Playtime:</span>
+                                <span class="sinco-sidebar-stat-value">
+                                    <span id="sincoDLastName">125</span>
+                                    <span class="sinco-sidebar-stat-unit">hrs</span>
+                                </span>
+                            </div>
+                            <div class="sinco-sidebar-stat">
+                                <span class="sinco-sidebar-stat-label">Employment:</span>
+                                <span class="sinco-sidebar-stat-value" id="sincoDBirthdate">Fisherman</span>
+                            </div>
+                            <div class="sinco-sidebar-stat">
+                                <span class="sinco-sidebar-stat-label">Players Online:</span>
+                                <span class="sinco-sidebar-stat-value" id="totalPlayers">1/64</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="sinco-sidebar-actions">
+                            <div class="sinco-sidebar-btn" id="sincoCsettings">
+                                <div class="sinco-sidebar-btn-icon" style="background-image: url('assets/f6f2d2f84633fd0b367610955fcbc2cb.png');"></div>
+                                <div class="sinco-sidebar-btn-text">
+                                    <h1>Settings</h1>
+                                    <h2>Open Settings Interface</h2>
+                                </div>
+                                <div class="sinco-sidebar-btn-line" style="background-color: #319db7;"></div>
+                            </div>
+                            <div class="sinco-sidebar-btn" id="sincoWeeklyChallenges">
+                                <div class="sinco-sidebar-btn-icon" style="background-image: url('assets/f6f2d2f84633fd0b367610955fcbc2cb.png');"></div>
+                                <div class="sinco-sidebar-btn-text">
+                                    <h1>Weekly Challenges</h1>
+                                    <h2>View & Complete Challenges</h2>
+                                </div>
+                                <div class="sinco-sidebar-btn-line" style="background-color: rgba(255, 182, 193, 0.6);"></div>
+                            </div>
+                            <div class="sinco-sidebar-btn" id="sincoRules">
+                                <div class="sinco-sidebar-btn-icon" style="background-image: url('assets/f6f2d2f84633fd0b367610955fcbc2cb.png');"></div>
+                                <div class="sinco-sidebar-btn-text">
+                                    <h1>Rules</h1>
+                                    <h2>View Server Rules</h2>
+                                </div>
+                                <div class="sinco-sidebar-btn-line" style="background-color: #319db7;"></div>
+                            </div>
+                            <div class="sinco-sidebar-btn" id="sincoStore">
+                                <div class="sinco-sidebar-btn-icon" style="background-image: url('assets/f6f2d2f84633fd0b367610955fcbc2cb.png');"></div>
+                                <div class="sinco-sidebar-btn-text">
+                                    <h1>Store</h1>
+                                    <h2>Visit Store</h2>
+                                </div>
+                                <div class="sinco-sidebar-btn-line" style="background-color: #e57eff;"></div>
+                            </div>
+                            <div class="sinco-sidebar-btn" id="sincoDispute">
+                                <div class="sinco-sidebar-btn-icon" style="background-image: url('assets/f6f2d2f84633fd0b367610955fcbc2cb.png');"></div>
+                                <div class="sinco-sidebar-btn-text">
+                                    <h1>Dispute</h1>
+                                    <h2>Open Dispute System</h2>
+                                </div>
+                                <div class="sinco-sidebar-btn-line" style="background-color: #91c737;"></div>
+                            </div>
+                            <div class="sinco-sidebar-btn" id="sincoCmap">
+                                <div class="sinco-sidebar-btn-icon" style="background-image: url('assets/map.png');"></div>
+                                <div class="sinco-sidebar-btn-text">
+                                    <h1>Map</h1>
+                                    <h2>Show The City Map</h2>
+                                </div>
+                                <div class="sinco-sidebar-btn-line" style="background-color: #91c737;"></div>
+                            </div>
+                            <div class="sinco-sidebar-btn" id="sincoCdisconnect">
+                                <div class="sinco-sidebar-btn-icon" style="background-image: url('assets/641aca4cf517389e2cc3f3e10554dff8.png');"></div>
+                                <div class="sinco-sidebar-btn-text">
+                                    <h1>Disconnect</h1>
+                                    <h2>Leave Server</h2>
+                                </div>
+                                <div class="sinco-sidebar-btn-line" style="background-color: #c63534;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Footer Info -->
+                        <div class="sinco-sidebar-footer">
+                            <p class="sinco-sidebar-footer-text">Any concerns or want to report a player? Use <strong>/calladmin</strong> or direct message staff.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleModelInfoVarGlobal>     
+  <Kits>
+    <Item>
+      <kitName>54322_uprs3_modkit</kitName>
+      <id value="54322" />
+      <kitType>MKT_SPECIAL</kitType>
+      <visibleMods>
+          <Item>
+              <modelName>uprs3unplate</modelName>
+              <modShopLabel>uprs3unplate</modShopLabel>
+              <type>VMT_PLTHOLDER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="0" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>uprs3peakzplate</modelName>
+              <modShopLabel>uprs3peakzplate</modShopLabel>
+              <type>VMT_PLTHOLDER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="0" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>uprs3unxpkzplate</modelName>
+              <modShopLabel>uprs3unxpkzplate</modShopLabel>
+              <type>VMT_PLTHOLDER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="0" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+      </visibleMods>
+      <linkMods />
+        <statMods>
+            <Item>
+                <identifier />
+                <modifier value="25" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="50" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="200" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="100" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="25" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="65" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="100" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="25" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="200" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="100" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="20" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="40" />
+                <audioApply value="1.0" />
+                <weight value="10" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="60" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="80" />
+                <audioApply value="1.0" />
+                <weight value="30" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="100" />
+                <audioApply value="1.0" />
+                <weight value="40" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="5" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="10" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="15" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="20" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+        </statMods>
+      <slotNames />
+      <liveryNames />
+    </Item>
+  </Kits>
+  <Lights>
+  </Lights>	
+</CVehicleModelInfoVarGlobal>

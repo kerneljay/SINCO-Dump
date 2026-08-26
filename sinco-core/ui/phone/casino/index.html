@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SINCO Casino</title>
+        <link rel="stylesheet" href="colors.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="frame.css" />
+        <script src="dev.js"></script>
+    </head>
+    <body>
+        <div id="phone-wrapper">
+            <div class="app" data-theme="dark">
+                <div class="intro" id="intro">
+                    <div class="intro-logos">
+                        <div class="intro-clip">
+                            <img class="small-logo brand-logo" src="../../inventory/logo.webp" alt="SINCO" />
+                        </div>
+                        <div class="intro-clip">
+                            <img class="big-logo brand-logo" src="../../inventory/logo.webp" alt="SINCO" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shell">
+                    <aside class="sidebar" id="sidebar">
+                        <div class="fl-head">
+                            <span class="fl-head-spacer"></span>
+                            <img class="brand-logo sidebar-logo" src="../../inventory/logo.webp" alt="SINCO" />
+                            <button class="fl-close" id="closeSidebar" type="button" aria-label="Close">
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="fl-body">
+                            <div class="fl-main fl-active-head">
+                                <span>Casino</span>
+                                <i>▾</i>
+                            </div>
+                            <div class="fl-dropdown is-open">
+                                <div class="fl-dd-element">Favourite</div>
+                                <div class="fl-dd-element">Recent</div>
+                                <div class="fl-dd-header">SINCO Originals</div>
+                                <button class="fl-dd-element fl-dropdown-active" id="sidebarBlackjack" type="button">Blackjack</button>
+                                <button class="fl-dd-element" id="sidebarRoulette" type="button">Roulette</button>
+                            </div>
+                            <div class="fl-seperator"></div>
+                            <div class="fl-extra">Promotions</div>
+                            <div class="fl-extra">Live Support</div>
+                        </div>
+                    </aside>
+                    <div class="sidebar-dim" id="sidebarDim"></div>
+
+                    <main class="odds-page">
+                        <header class="fixed-top">
+                            <button class="menu-btn" id="openSidebar" type="button" aria-label="Menu">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 7h16M4 12h16M4 17h16" />
+                                </svg>
+                            </button>
+                            <div class="center-wallets" id="walletWrap">
+                                <button class="ft-current-wallet" id="walletToggle" type="button">
+                                    <span class="coin" id="currentCoin" data-ticker="CHIP">S</span>
+                                    <span class="current-value" id="currentValue">£0</span>
+                                    <i id="walletChevron">▾</i>
+                                </button>
+                                <button class="sw-text" id="openCashier" type="button">Wallet</button>
+                                <div class="wallet-dropdown" id="walletDropdown">
+                                    <div class="wallet-search">
+                                        <input id="walletSearch" type="text" placeholder="Search" />
+                                    </div>
+                                    <div class="wallet-dropdown-options" id="walletOptions"></div>
+                                    <div class="wallet-settings">Wallet Settings</div>
+                                </div>
+                            </div>
+                            <img class="brand-logo header-logo" src="../../inventory/logo.webp" alt="SINCO" />
+                        </header>
+
+                        <section class="home" id="homeView">
+                            <div class="home-block">
+                                <div class="home-block-head">
+                                    <h3>SINCO Originals</h3>
+                                </div>
+                                <div class="originals-grid">
+                                    <button class="original-tile" id="openBlackjack" type="button">
+                                        <img src="blackjack.png" alt="Blackjack" />
+                                    </button>
+                                    <button class="original-tile" id="openRoulette" type="button">
+                                        <img src="roullete.png" alt="Roulette" />
+                                    </button>
+                                    <div class="original-tile soon-tile">Soon</div>
+                                    <div class="original-tile soon-tile">Soon</div>
+                                    <div class="original-tile soon-tile">Soon</div>
+                                    <div class="original-tile soon-tile">Soon</div>
+                                    <div class="original-tile soon-tile">Soon</div>
+                                    <div class="original-tile soon-tile">Soon</div>
+                                    <div class="original-tile soon-tile">Soon</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="game-view" id="blackjackView">
+                            <div class="game-top">
+                                <button class="game-back" id="closeBlackjack" type="button">‹ Casino</button>
+                                <span>Blackjack</span>
+                                <span></span>
+                            </div>
+                            <div class="bj-table">
+                                <div class="bj-hand">
+                                    <p>Dealer <b id="dealerTotal">0</b></p>
+                                    <div class="bj-cards" id="dealerCards"></div>
+                                </div>
+                                <p class="bj-status" id="bjStatus">Place a bet to start</p>
+                                <div class="bj-hand">
+                                    <p>You <b id="playerTotal">0</b></p>
+                                    <div class="bj-cards" id="playerCards"></div>
+                                </div>
+                            </div>
+                            <div class="bj-controls">
+                                <label>Bet amount</label>
+                                <div class="bj-bet-row">
+                                    <input id="bjBet" type="number" min="10000" max="500000000" step="10000" value="10000" />
+                                    <button class="st-mini" id="bjHalf" type="button">½</button>
+                                    <button class="st-mini" id="bjDouble" type="button">2×</button>
+                                </div>
+                                <div class="bj-sides">
+                                    <div>
+                                        <label>Perfect Pairs <span>6:1 / 12:1 / 25:1</span></label>
+                                        <input id="bjPairBet" type="number" min="0" max="500000000" step="10000" value="0" />
+                                    </div>
+                                    <div>
+                                        <label>21+3 <span>5:1 – 100:1</span></label>
+                                        <input id="bjThreeBet" type="number" min="0" max="500000000" step="10000" value="0" />
+                                    </div>
+                                </div>
+                                <div class="bj-actions">
+                                    <button class="bj-primary" id="bjDeal" type="button">Bet</button>
+                                    <button class="bj-btn" id="bjHit" type="button" disabled>Hit</button>
+                                    <button class="bj-btn" id="bjStand" type="button" disabled>Stand</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="game-view" id="rouletteView">
+                            <div class="game-top">
+                                <button class="game-back" id="closeRoulette" type="button">‹ Casino</button>
+                                <span>Roulette</span>
+                                <span></span>
+                            </div>
+                            <div class="bj-table rl-table">
+                                <div class="rl-wheel-wrap">
+                                    <div class="rl-ball" id="rlBall"></div>
+                                    <svg class="rl-wheel" id="rlWheel" viewBox="0 0 280 280"></svg>
+                                </div>
+                                <div class="rl-hit" id="rlHit">-</div>
+                                <div class="rl-board" id="rlBoard"></div>
+                                <p class="bj-status" id="rlStatus">Tap numbers to place chips</p>
+                            </div>
+                            <div class="bj-controls">
+                                <label>Bet amount</label>
+                                <div class="bj-bet-row">
+                                    <input id="rlBet" type="number" min="10000" max="500000000" step="10000" value="10000" />
+                                    <button class="st-mini" id="rlHalf" type="button">½</button>
+                                    <button class="st-mini" id="rlDouble" type="button">2×</button>
+                                </div>
+                                <div class="rl-actions">
+                                    <button class="bj-btn" id="rlClear" type="button">Clear</button>
+                                    <button class="bj-primary" id="rlSpin" type="button">Spin</button>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+
+                    <section class="cashier" id="cashier">
+                        <div class="cashier-top">
+                            <span>Wallet</span>
+                            <button class="fl-close" type="button" id="closeCashier" aria-label="Close">
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="cashier-balance">
+                            <p>Casino chips</p>
+                            <h3 id="cashierCoin">CHIPS</h3>
+                            <p id="cashierValue">£0</p>
+                            <p id="cashierBank">Bank £0</p>
+                        </div>
+                        <div class="st-seg">
+                            <button class="st-seg-btn is-on" data-mode="deposit" type="button">Deposit</button>
+                            <button class="st-seg-btn" data-mode="withdraw" type="button">Withdraw</button>
+                        </div>
+                        <label>Amount</label>
+                        <input id="cashierAmount" type="number" min="1" value="100" />
+                        <p class="cashier-note">Deposit takes from your SINCO bank. Withdraw pays back into your bank.</p>
+                        <button class="cashier-go" id="cashierGo" type="button">Deposit</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <script>
+            function loadCasinoApp() {
+                if (window.__casinoLoaded) return;
+                window.__casinoLoaded = true;
+                const script = document.createElement('script');
+                script.src = 'script.js';
+                document.body.appendChild(script);
+            }
+            window.addEventListener('message', (e) => {
+                if (e.data === 'componentsLoaded') loadCasinoApp();
+            });
+            if (!window.invokeNative) {
+                window.addEventListener('load', loadCasinoApp);
+            }
+        </script>
+    </body>
+</html>

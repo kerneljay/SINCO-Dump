@@ -1,0 +1,35 @@
+<CVehicleModelInfoVariation>
+  <variationData>
+    <Item>
+      <modelName>rs3crzyx</modelName>
+      <colors>
+          <Item>
+              <indices content="char_array">
+                02 
+                01 
+                156 
+                27
+                00
+                27
+              </indices>
+              <liveries>
+                  <Item value="true" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+              </liveries>
+          </Item>
+      </colors>
+      <kits>
+          <Item>37129133_rs3crzyx_modkit</Item>
+      </kits>
+      <plateProbabilities />
+      <lightSettings value="9882" />
+      <sirenSettings value="0" />
+      </Item>
+    </variationData>
+</CVehicleModelInfoVariation>

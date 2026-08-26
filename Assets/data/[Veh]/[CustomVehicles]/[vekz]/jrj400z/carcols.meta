@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVarGlobal>    
+  <Kits>
+    <Item>
+        <kitName>78431_jrj400z_modkit</kitName>
+        <id value="78431" />
+        <kitType>MKT_SPECIAL</kitType>
+        <visibleMods>
+            <Item>
+                <modelName>niss400z_exhaust</modelName>
+                <modShopLabel>niss400z_exhaust</modShopLabel>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>niss400z_exhaust1</modelName>
+                <modShopLabel>niss400z_exhaust1</modShopLabel>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>niss400z_exhaust2</modelName>
+                <modShopLabel>niss400z_exhaust2</modShopLabel>
+                <type>VMT_EXHAUST</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>niss400z_mirrors</modelName>
+                <modShopLabel>niss400z_mirrors</modShopLabel>
+                <type>VMT_SKIRT</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>niss400z_spoiler</modelName>
+                <modShopLabel>niss400z_spoiler</modShopLabel>
+                <type>VMT_SPOILER</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>niss400z_window</modelName>
+                <modShopLabel>niss400z_window</modShopLabel>
+                <type>VMT_CHASSIS</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>niss400z_window1</modelName>
+                <modShopLabel>niss400z_window1</modShopLabel>
+                <type>VMT_CHASSIS</type>
+                <bone>chassis</bone>
+                <collisionBone>chassis</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>niss400z_plate</modelName>
+                <modShopLabel>niss400z_plate</modShopLabel>
+                <type>VMT_PLTHOLDER</type>
+                <bone>chassis</bone>
+                <collisionBone>bone</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>niss400z_plate1</modelName>
+                <modShopLabel>niss400z_plate1</modShopLabel>
+                <type>VMT_PLTHOLDER</type>
+                <bone>chassis</bone>
+                <collisionBone>bone</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+                        <Item>
+                <modelName>niss400z_plate2</modelName>
+                <modShopLabel>niss400z_plate2</modShopLabel>
+                <type>VMT_PLTHOLDER</type>
+                <bone>chassis</bone>
+                <collisionBone>bone</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+                <modelName>niss400z_plate3</modelName>
+                <modShopLabel>niss400z_plate3</modShopLabel>
+                <type>VMT_PLTHOLDER</type>
+                <bone>chassis</bone>
+                <collisionBone>bone</collisionBone>
+                <cameraPos>VMCP_DEFAULT</cameraPos>
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <turnOffExtra value="false" />
+                <disableBonnetCamera value="false" />
+                <allowBonnetSlide value="true" />
+            </Item>
+        </visibleMods>
+        <statMods>
+           <Item>
+          <identifier />
+          <modifier value="25" />
+          <audioApply value="1.000000" />
+          <weight value="20" />
+          <type>VMT_ENGINE</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="50" />
+          <audioApply value="1.000000" />
+          <weight value="20" />
+          <type>VMT_ENGINE</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="75" />
+          <audioApply value="1.000000" />
+          <weight value="20" />
+          <type>VMT_ENGINE</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="100" />
+          <audioApply value="1.000000" />
+          <weight value="20" />
+          <type>VMT_ENGINE</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="25" />
+          <audioApply value="1.000000" />
+          <weight value="5" />
+          <type>VMT_BRAKES</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="50" />
+          <audioApply value="1.000000" />
+          <weight value="5" />
+          <type>VMT_BRAKES</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="100" />
+          <audioApply value="1.000000" />
+          <weight value="5" />
+          <type>VMT_BRAKES</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="25" />
+          <audioApply value="1.000000" />
+          <weight value="5" />
+          <type>VMT_GEARBOX</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="50" />
+          <audioApply value="1.000000" />
+          <weight value="5" />
+          <type>VMT_GEARBOX</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="100" />
+          <audioApply value="1.000000" />
+          <weight value="5" />
+          <type>VMT_GEARBOX</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="20" />
+          <audioApply value="1.000000" />
+          <weight value="0" />
+          <type>VMT_ARMOUR</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="40" />
+          <audioApply value="1.000000" />
+          <weight value="10" />
+          <type>VMT_ARMOUR</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="60" />
+          <audioApply value="1.000000" />
+          <weight value="20" />
+          <type>VMT_ARMOUR</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="80" />
+          <audioApply value="1.000000" />
+          <weight value="30" />
+          <type>VMT_ARMOUR</type>
+        </Item>
+        <Item>
+          <identifier />
+          <modifier value="100" />
+          <audioApply value="1.000000" />
+          <weight value="40" />
+          <type>VMT_ARMOUR</type>
+        </Item>
+            <Item>
+                <identifier />
+                <modifier value="6" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="11" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="16" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="22" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+        </statMods>
+      <slotNames />
+      <liveryNames />
+    </Item>
+   </Kits>
+    <Lights/>
+</CVehicleModelInfoVarGlobal>

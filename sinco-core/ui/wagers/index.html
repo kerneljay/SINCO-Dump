@@ -1,0 +1,357 @@
+<div id="wagerArenaContainer" class="wager-arena-root st-root">
+    <div class="st-shell" data-category="arena">
+        <div class="st-headerRow">
+            <div class="st-headerTitleWrap">
+                <div class="st-headerTitle">WAGERS</div>
+                <button type="button" class="wager-close-btn" id="wagerArenaCloseBtn" aria-label="Close">×</button>
+            </div>
+        </div>
+        <div class="st-content">
+            <div class="jm2">
+            <div class="arena arena--home">
+                <div class="arena-statsBar">
+                    <div class="arena-statElo">
+                        <div class="arena-statEloValue" id="wagerStatElo">1200</div>
+                        <div class="arena-statEloMeta">
+                            <div class="arena-statEloLabel">Ranked ELO</div>
+                            <div class="arena-statEloRank" id="wagerStatRank">Silver</div>
+                            <div class="arena-statEloTier" id="wagerStatTier">#—</div>
+                        </div>
+                    </div>
+                    <div class="arena-statList">
+                        <div class="arena-statItem">
+                            <div class="arena-statNum" id="wagerStatOpen">0</div>
+                            <div class="arena-statKey">Open wagers</div>
+                        </div>
+                        <div class="arena-statItem">
+                            <div class="arena-statNum" id="wagerStatWarmup">0</div>
+                            <div class="arena-statKey">In warmup</div>
+                        </div>
+                        <div class="arena-statItem">
+                            <div class="arena-statNum arena-statNum--live" id="wagerStatQueue">0</div>
+                            <div class="arena-statKey" id="wagerStatQueueKey">Not queued</div>
+                        </div>
+                    </div>
+                    <div class="arena-statPersonal">
+                        <div class="arena-statPersonalItem">
+                            <div class="arena-statPersonalNum" id="wagerStatKills">0</div>
+                            <div class="arena-statPersonalKey">Kills</div>
+                        </div>
+                        <div class="arena-statPersonalItem">
+                            <div class="arena-statPersonalNum" id="wagerStatDeaths">0</div>
+                            <div class="arena-statPersonalKey">Deaths</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arena-body">
+                    <nav class="arena-sidebar" id="wagerArenaNav">
+                        <button type="button" class="arena-navItem isActive" data-page="wagers">
+                            <span class="arena-navIcon">⚔</span>
+                            <span class="arena-navLabel">Wagers</span>
+                        </button>
+                        <button type="button" class="arena-navItem" data-page="live">
+                            <span class="arena-navIcon arena-navIcon--liveDot"></span>
+                            <span class="arena-navLabel">Live</span>
+                        </button>
+                        <button type="button" class="arena-navItem" data-page="ranked">
+                            <span class="arena-navIcon">🏆</span>
+                            <span class="arena-navLabel">Ranked</span>
+                        </button>
+                        <button type="button" class="arena-navItem" data-page="warmup">
+                            <span class="arena-navIcon">🎯</span>
+                            <span class="arena-navLabel">Warmup</span>
+                        </button>
+                        <button type="button" class="arena-navItem" data-page="leaderboard">
+                            <span class="arena-navIcon">📊</span>
+                            <span class="arena-navLabel">Leaderboard</span>
+                        </button>
+                        <button type="button" class="arena-navItem" data-page="maps">
+                            <span class="arena-navIcon">🧭</span>
+                            <span class="arena-navLabel">Maps</span>
+                        </button>
+                        <button type="button" class="arena-navItem" data-page="tournaments">
+                            <span class="arena-navIcon">🥇</span>
+                            <span class="arena-navLabel">Tournaments</span>
+                        </button>
+                        <button type="button" class="arena-navItem" data-page="results">
+                            <span class="arena-navIcon">📜</span>
+                            <span class="arena-navLabel">Results</span>
+                        </button>
+                    </nav>
+
+                    <div class="arena-content">
+                        <!-- Wagers browse -->
+                        <div class="arena-page arena-grid arena-grid--single" data-page="wagers">
+                            <div class="jm2-panel arena-listPanel" id="wagerListPanel">
+                                <div class="arena-listHeader">
+                                    <div class="arena-listHeaderMain">
+                                        <div class="arena-listHeaderTitle" id="wagerOpenTitle">Open wagers (0)</div>
+                                    </div>
+                                    <div class="arena-listHeaderActions">
+                                        <button type="button" class="arena-btn arena-btn--primary arena-btn--sm" id="wagerOpenCreateBtn">+ CREATE WAGER</button>
+                                    </div>
+                                </div>
+                                <div class="arena-listPanelBody">
+                                    <div class="arena-browseCards" id="wagerLobbyList"></div>
+                                </div>
+                            </div>
+                            <div class="jm2-panel arena-detailPanel" id="wagerDetailPanel" hidden></div>
+                        </div>
+
+                        <!-- Create wager -->
+                        <div class="arena-page arena-createPage" data-page="create" hidden>
+                            <div class="arena-listHeader">
+                                <button type="button" class="arena-backBtn" data-back="wagers">← Back to wagers</button>
+                                <div class="arena-listHeaderTitle">Create wager</div>
+                            </div>
+                            <div class="arena-grid arena-createGrid">
+                                <div class="jm2-panel">
+                                    <div class="jm2-panelHeader">Setup</div>
+                                    <div class="arena-panelBody">
+                                        <div class="arena-fieldGroupLabel">Mode</div>
+                                        <div class="arena-modeChips" id="wagerModeChips">
+                                            <span class="arena-chip isActive">Deathmatch</span>
+                                        </div>
+                                        <div class="arena-formGrid">
+                                            <div class="arena-field">
+                                                <label class="arena-fieldLabel">Weapon Category</label>
+                                                <select class="arena-select" id="wagerCategorySelect"></select>
+                                            </div>
+                                            <div class="arena-field">
+                                                <label class="arena-fieldLabel">Weapon</label>
+                                                <select class="arena-select" id="wagerWeaponSelect"></select>
+                                            </div>
+                                            <div class="arena-field">
+                                                <label class="arena-fieldLabel">Armour</label>
+                                                <select class="arena-select" id="wagerArmourSelect"></select>
+                                            </div>
+                                            <div class="arena-field">
+                                                <label class="arena-fieldLabel">Best Of</label>
+                                                <select class="arena-select" id="wagerBestOfSelect"></select>
+                                            </div>
+                                            <div class="arena-field">
+                                                <label class="arena-fieldLabel">Map</label>
+                                                <button type="button" class="arena-mapField" id="wagerMapField">
+                                                    <span class="arena-mapFieldThumb" id="wagerMapThumb">
+                                                        <img class="arena-mapFieldThumbImg" id="wagerMapThumbImg" alt="">
+                                                    </span>
+                                                    <span class="arena-mapFieldName" id="wagerMapName">Select a map</span>
+                                                    <span class="arena-mapFieldChange">Change</span>
+                                                </button>
+                                            </div>
+                                            <div class="arena-field">
+                                                <label class="arena-fieldLabel">Bet Amount</label>
+                                                <input class="arena-input arena-input--bet" id="wagerBetAmount" type="text" inputmode="numeric" placeholder="100,000">
+                                            </div>
+                                        </div>
+                                        <div class="arena-toggles">
+                                            <button type="button" class="arena-toggleChip" id="wagerHsToggle">
+                                                <span class="arena-toggleDot"></span> Headshots only
+                                            </button>
+                                            <button type="button" class="arena-toggleChip" id="wagerPrivateToggle">
+                                                <span class="arena-toggleDot"></span> Private
+                                            </button>
+                                            <button type="button" class="arena-toggleChip" id="wagerNoCrouchToggle">
+                                                <span class="arena-toggleDot"></span> Crouch disabled
+                                            </button>
+                                            <button type="button" class="arena-toggleChip" id="wagerNoQPeakToggle">
+                                                <span class="arena-toggleDot"></span> Q peak disabled
+                                            </button>
+                                        </div>
+                                        <input class="arena-input arena-passwordInput" id="wagerPasswordInput" type="text" placeholder="Lobby password" hidden>
+                                        <button type="button" class="arena-btn arena-btn--primary arena-createBtn" id="wagerProposeBtn">Propose Wager</button>
+                                    </div>
+                                </div>
+                                <div class="jm2-panel">
+                                    <div class="jm2-panelHeader">Summary</div>
+                                    <div class="arena-panelBody arena-summaryBody">
+                                        <div class="arena-summaryBanner" id="wagerSummaryBanner">
+                                            <img class="arena-summaryBannerImg" id="wagerSummaryBannerImg" alt="">
+                                            <div class="arena-summaryBannerLabel" id="wagerSummaryMap">No map selected</div>
+                                        </div>
+                                        <div class="arena-summaryMode" id="wagerSummaryMode">Deathmatch</div>
+                                        <dl class="arena-summaryList">
+                                            <div><dt>Weapon</dt><dd id="wagerSummaryWeapon">—</dd></div>
+                                            <div><dt>Armour</dt><dd id="wagerSummaryArmour">—</dd></div>
+                                            <div><dt>Best of</dt><dd id="wagerSummaryBestOf">—</dd></div>
+                                        </dl>
+                                        <div class="arena-summaryPayout">
+                                            <div class="arena-summaryPayoutLabel">Pot</div>
+                                            <div class="arena-summaryPayoutValue" id="wagerSummaryPot">£0</div>
+                                        </div>
+                                        <div class="arena-summaryTags" id="wagerSummaryTags"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map picker (create flow) -->
+                        <div class="arena-page arena-createPage arena-createPage--mapPicker" data-page="mapPicker" hidden>
+                            <div class="arena-listHeader">
+                                <button type="button" class="arena-backBtn" data-back="create">← Back</button>
+                                <div class="arena-listHeaderTitle">Select Map</div>
+                            </div>
+                            <div class="arena-mapsWrap">
+                                <div class="arena-mapsToolbar">
+                                    <input class="arena-input arena-mapsSearch" id="wagerMapsSearch" type="text" placeholder="Search maps">
+                                    <label class="arena-checkbox"><input type="checkbox" id="wagerFavOnly"> Favourites only</label>
+                                    <span class="arena-mapsCount" id="wagerMapsCount">0 maps</span>
+                                </div>
+                                <div class="arena-mapsTabs" id="wagerMapsTabs"></div>
+                                <div class="arena-maps" id="wagerMapsGrid"></div>
+                                <div class="arena-mapsPager">
+                                    <button type="button" class="arena-btn arena-btn--ghost arena-btn--sm" id="wagerMapsPrev">Prev</button>
+                                    <div class="arena-mapsPagerInfo" id="wagerMapsPageInfo">1 / 1</div>
+                                    <button type="button" class="arena-btn arena-btn--ghost arena-btn--sm" id="wagerMapsNext">Next</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ranked -->
+                        <div class="arena-page arena-soloPage" data-page="ranked" hidden>
+                            <div class="jm2-panel">
+                                <div class="arena-comingSoon">
+                                    <div class="arena-comingSoonTitle">Soon</div>
+                                    <div class="arena-comingSoonSub">Ranked queue is coming later.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Warmup -->
+                        <div class="arena-page arena-soloPage" data-page="warmup" hidden>
+                            <div class="jm2-panel">
+                                <div class="arena-ranked arena-ranked--center">
+                                    <div class="arena-rankedIcon">🎯</div>
+                                    <div class="arena-rankedText">Warmup in FFA with instant respawns</div>
+                                    <div class="arena-warmupCount"><span class="arena-warmupNum" id="wagerWarmupCount">0</span> in lobby</div>
+                                    <button type="button" class="arena-btn arena-btn--primary" id="wagerWarmupJoinBtn">JOIN WARMUP</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Maps browser -->
+                        <div class="arena-page" data-page="maps" hidden>
+                            <div class="jm2-panel" style="flex:1;">
+                                <div class="arena-listHeader">
+                                    <div class="arena-listHeaderTitle">Maps</div>
+                                </div>
+                                <div class="arena-mapsWrap">
+                                    <div class="arena-mapsTabs" id="wagerMapsBrowseTabs"></div>
+                                    <div class="arena-maps" id="wagerMapsBrowse"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tournaments -->
+                        <div class="arena-page" data-page="tournaments" hidden>
+                            <div class="jm2-panel" style="flex:1;">
+                                <div class="arena-listHeader">
+                                    <div class="arena-listHeaderTitle">Tournaments</div>
+                                </div>
+                                <div class="arena-browseCards arena-browseCards--tournTiles" id="wagerTournList">
+                                    <div class="jm2-keysEmpty">No tournaments scheduled</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Leaderboard -->
+                        <div class="arena-page" data-page="leaderboard" hidden>
+                            <div class="jm2-panel arena-lbBoard">
+                                <div class="jm2-panelHeader arena-lbHeader">
+                                    <span class="jm2-lbPanelTitle">ELO Leaderboard</span>
+                                </div>
+                                <div class="jm2-leaderboardInner">
+                                    <div class="jm2-lbPodium" id="wagerLbPodium"></div>
+                                    <div class="arena-lbListHead">
+                                        <span class="jm2-lbListRank">#</span>
+                                        <span class="jm2-lbListName">Name</span>
+                                        <span class="arena-lbKdCol arena-lbKdCol--kills">K</span>
+                                        <span class="arena-lbKdCol arena-lbKdCol--deaths">D</span>
+                                        <span class="arena-lbKdCol arena-lbKdCol--ratio">K/D</span>
+                                        <span class="jm2-lbListLevel">ELO</span>
+                                    </div>
+                                    <div class="jm2-leaderboardList" id="wagerLbList"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Live -->
+                        <div class="arena-page" data-page="live" hidden>
+                            <div class="jm2-panel" style="flex:1;">
+                                <div class="arena-listHeader">
+                                    <div class="arena-listHeaderTitle" id="wagerLivePageTitle">Live matches (0)</div>
+                                </div>
+                                <div class="arena-browseCards arena-browseCards--live" id="wagerLiveList">
+                                    <div class="jm2-keysEmpty">No live matches</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="arena-page" data-page="results" hidden>
+                            <div class="jm2-panel" style="flex:1;">
+                                <div class="arena-listHeader">
+                                    <div class="arena-listHeaderTitle">Results</div>
+                                </div>
+                                <div class="jm2-keysEmpty">No results yet</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="arena-hud" id="wagerMatchHud" hidden>
+        <div class="arena-hudBar">
+            <div class="arena-hudSide arena-hudSide--left" id="wagerHudTeamA"></div>
+            <div class="arena-hudCore">
+                <div class="arena-hudScoreRow">
+                    <span class="arena-hudScoreNum arena-hudScoreNum--t1" id="wagerHudScoreA">0</span>
+                    <span class="arena-hudClock" id="wagerHudClock">0:00</span>
+                    <span class="arena-hudScoreNum arena-hudScoreNum--t2" id="wagerHudScoreB">0</span>
+                </div>
+                <div class="arena-hudMeta">
+                    <span id="wagerHudRound">ROUND 1/1</span>
+                    <span class="arena-hudMetaTag" id="wagerHudBestOf">BO1</span>
+                </div>
+            </div>
+            <div class="arena-hudSide arena-hudSide--right" id="wagerHudTeamB"></div>
+        </div>
+    </div>
+
+    <div class="arena-forfeitScrim" id="wagerLeaveFfa" hidden>
+        <div class="arena-forfeitDialog">
+            <div class="arena-forfeitTitle">Leave FFA?</div>
+            <div class="arena-forfeitBody">You'll be sent back to where you joined from.</div>
+            <div class="arena-forfeitActions">
+                <button type="button" class="arena-btn arena-btn--ghost" id="wagerLeaveFfaStay">STAY</button>
+                <button type="button" class="arena-btn arena-btn--danger" id="wagerLeaveFfaBtn">LEAVE FFA</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="arena-passwordPromptScrim" id="wagerPasswordPrompt" hidden>
+        <div class="arena-passwordPromptDialog">
+            <div class="arena-passwordPromptTitle">Private Wager</div>
+            <input class="arena-input" id="wagerJoinPassword" type="text" placeholder="Enter password">
+            <div class="arena-passwordPromptActions">
+                <button type="button" class="arena-btn arena-btn--ghost" id="wagerJoinPasswordCancel">Cancel</button>
+                <button type="button" class="arena-btn arena-btn--primary" id="wagerJoinPasswordOk">Join</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="arena-result" id="wagerMatchResult" hidden></div>
+    <div class="arena-spectateHud" id="wagerSpectateHud" hidden>
+        <div class="arena-spectateBar">
+            <span class="arena-spectateLabel">Spectating</span>
+            <span class="arena-spectateMap" id="wagerSpectateMap"></span>
+            <span class="arena-spectateWatching" id="wagerSpectateWatching"></span>
+            <span class="arena-spectatePlayers" id="wagerSpectatePlayers"></span>
+            <span class="arena-spectateLeave">Press <b>← →</b> to switch · <b>E</b> to leave</span>
+        </div>
+    </div>
+</div>

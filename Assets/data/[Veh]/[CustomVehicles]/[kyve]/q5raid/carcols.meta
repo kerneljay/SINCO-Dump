@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleModelInfoVarGlobal>     
+  <Kits>
+    <Item>
+    <kitName>63636_q5raid_modkit</kitName>
+    <id value="63636" />
+    <kitType>MKT_SPORT</kitType>
+    <visibleMods>
+        <Item>
+            <modelName>q5raid_vent</modelName>
+            <modShopLabel>q5raid_vent</modShopLabel>
+            <turnOffBones>
+                <Item>misc_c</Item>
+            </turnOffBones>
+            <type>VMT_BONNET</type>
+            <bone>chassis</bone>
+            <collisionBone>boot</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_vent2</modelName>
+            <modShopLabel>q5raid_vent2</modShopLabel>
+            <turnOffBones>
+                <Item>misc_c</Item>
+            </turnOffBones>
+            <type>VMT_BONNET</type>
+            <bone>chassis</bone>
+            <collisionBone>boot</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_lightbar2</modelName>
+            <modShopLabel>q5raid_lightbar2</modShopLabel>
+            <turnOffBones>
+                <Item>misc_p</Item>
+            </turnOffBones>
+            <type>VMT_ROOF</type>
+            <bone>chassis</bone>
+            <collisionBone>boot</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_lightbar3</modelName>
+            <modShopLabel>q5raid_lightbar3</modShopLabel>
+            <turnOffBones>
+                <Item>misc_p</Item>
+            </turnOffBones>
+            <type>VMT_ROOF</type>
+            <bone>chassis</bone>
+            <collisionBone>boot</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_snort</modelName>
+            <modShopLabel>q5raid_snort</modShopLabel>
+            <type>VMT_CHASSIS</type>
+            <bone>chassis</bone>
+            <collisionBone>chassis</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_snort2</modelName>
+            <modShopLabel>q5raid_snort2</modShopLabel>
+            <type>VMT_CHASSIS</type>
+            <bone>chassis</bone>
+            <collisionBone>chassis</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_spoiler</modelName>
+            <modShopLabel>q5raid_spoiler</modShopLabel>
+            <type>VMT_SPOILER</type>
+            <bone>chassis</bone>
+            <collisionBone>chassis</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_plate</modelName>
+            <modShopLabel>q5raid_plate</modShopLabel>
+            <type>VMT_PLTHOLDER</type>
+            <bone>chassis</bone>
+            <collisionBone>chassis</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_plate1</modelName>
+            <modShopLabel>q5raid_plate1</modShopLabel>
+            <type>VMT_PLTHOLDER</type>
+            <bone>chassis</bone>
+            <collisionBone>chassis</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_plate2</modelName>
+            <modShopLabel>q5raid_plate2</modShopLabel>
+            <type>VMT_PLTHOLDER</type>
+            <bone>chassis</bone>
+            <collisionBone>chassis</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_boot</modelName>
+            <modShopLabel>q5raid_boot</modShopLabel>
+            <turnOffBones>
+                <Item>misc_o</Item>
+            </turnOffBones>
+            <type>VMT_TRUNK</type>
+            <bone>chassis</bone>
+            <collisionBone>boot</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+                <Item>
+            <modelName>q5raid_frontbumper</modelName>
+            <modShopLabel>q5raid_frontbumper</modShopLabel>
+            <type>VMT_BUMPER_F</type>
+            <bone>chassis</bone>
+            <collisionBone>chassis</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>        
+        <Item>
+            <modelName>q5raid_lights</modelName>
+            <modShopLabel>q5raid_lights</modShopLabel>
+            <type>VMT_GRILL</type>
+            <bone>chassis</bone>
+            <collisionBone>chassis</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+        <Item>
+            <modelName>q5raid_ram</modelName>
+            <modShopLabel>q5raid_ram</modShopLabel>
+            <type>VMT_WING_L</type>
+            <bone>chassis</bone>
+            <collisionBone>chassis</collisionBone>
+            <cameraPos>VMCP_DEFAULT</cameraPos>
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <turnOffExtra value="false" />
+            <disableBonnetCamera value="false" />
+            <allowBonnetSlide value="true" />
+        </Item>
+    </visibleMods>
+    <statMods>
+        <Item>
+            <identifier />
+            <modifier value="25" />
+            <audioApply value="1.0" />
+            <weight value="20" />
+            <type>VMT_ENGINE</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="50" />
+            <audioApply value="1.0" />
+            <weight value="20" />
+            <type>VMT_ENGINE</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="75" />
+            <audioApply value="1.0" />
+            <weight value="20" />
+            <type>VMT_ENGINE</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="100" />
+            <audioApply value="1.0" />
+            <weight value="20" />
+            <type>VMT_ENGINE</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="25" />
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <type>VMT_BRAKES</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="65" />
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <type>VMT_BRAKES</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="100" />
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <type>VMT_BRAKES</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="25" />
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <type>VMT_GEARBOX</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="50" />
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <type>VMT_GEARBOX</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="100" />
+            <audioApply value="1.0" />
+            <weight value="5" />
+            <type>VMT_GEARBOX</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="20" />
+            <audioApply value="1.0" />
+            <weight value="0" />
+            <type>VMT_ARMOUR</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="40" />
+            <audioApply value="1.0" />
+            <weight value="10" />
+            <type>VMT_ARMOUR</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="60" />
+            <audioApply value="1.0" />
+            <weight value="20" />
+            <type>VMT_ARMOUR</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="80" />
+            <audioApply value="1.0" />
+            <weight value="30" />
+            <type>VMT_ARMOUR</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="100" />
+            <audioApply value="1.0" />
+            <weight value="40" />
+            <type>VMT_ARMOUR</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="5" />
+            <audioApply value="1.0" />
+            <weight value="0" />
+            <type>VMT_SUSPENSION</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="10" />
+            <audioApply value="1.0" />
+            <weight value="0" />
+            <type>VMT_SUSPENSION</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="15" />
+            <audioApply value="1.0" />
+            <weight value="0" />
+            <type>VMT_SUSPENSION</type>
+        </Item>
+        <Item>
+            <identifier />
+            <modifier value="20" />
+            <audioApply value="1.0" />
+            <weight value="0" />
+            <type>VMT_SUSPENSION</type>
+        </Item>
+    </statMods>
+      <slotNames />
+      <liveryNames />
+    </Item>
+  </Kits>
+</CVehicleModelInfoVarGlobal>

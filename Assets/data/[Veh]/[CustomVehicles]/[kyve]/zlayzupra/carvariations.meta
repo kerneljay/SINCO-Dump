@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleModelInfoVariation>
+  <variationData>
+    <Item>
+            <modelName>zlayzupra</modelName>
+            <colors>
+                <Item>
+                    <indices content="char_array">
+            0
+			27
+			0
+			0
+			27
+			0
+          </indices>
+                    <liveries>
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                    </liveries>
+                </Item>
+                <Item>
+                    <indices content="char_array">
+            64
+			0
+			64
+			0
+			27
+			0
+          </indices>
+                    <liveries>
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                    </liveries>
+                </Item>
+                <Item>
+                    <indices content="char_array">
+            27
+			0
+			27
+			0
+			27
+			0
+          </indices>
+                    <liveries>
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                    </liveries>
+                </Item>
+                <Item>
+                    <indices content="char_array">
+            112
+			27
+			112
+			0
+			112
+			0
+          </indices>
+                    <liveries>
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                    </liveries>
+                </Item>
+                <Item>
+                    <indices content="char_array">
+            2
+			0
+			3
+			0
+			112
+			0
+          </indices>
+                    <liveries>
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                    </liveries>
+                </Item>
+            </colors>
+            <kits>
+                <Item>28042_zlayzupra_modkit</Item>
+            </kits>
+            <plateProbabilities>
+                <Probabilities>
+                    <Item>
+                        <Name>Standard White</Name>
+                        <Value value="25.0" />
+                    </Item>
+                    <Item>
+                        <Name>White Plate 2</Name>
+                        <Value value="25.0" />
+                    </Item>
+                    <Item>
+                        <Name>Blue Plate</Name>
+                        <Value value="25.0" />
+                    </Item>
+                    <Item>
+                        <Name>Yello Plate</Name>
+                        <Value value="25.0" />
+                    </Item>
+                    <Item>
+                        <Name>yankton plate</Name>
+                        <Value value="25.0" />
+                    </Item>
+                </Probabilities>
+            </plateProbabilities>
+            <lightSettings value="902" />
+            <sirenSettings value="0" />
+        </Item>
+  </variationData>
+</CVehicleModelInfoVariation>

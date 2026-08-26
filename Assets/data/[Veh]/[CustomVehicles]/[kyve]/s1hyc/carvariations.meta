@@ -1,0 +1,40 @@
+<CVehicleModelInfoVariation>
+  <variationData>
+    <Item>
+      <modelName>s1hyc</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            127 
+            0 
+            0 
+            0
+          </indices>
+          <liveries>
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+      </colors>
+      <kits>
+        <Item>9850305029525235_s1hyc_modkit</Item>
+      </kits>
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="100.0" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="0" />
+      <sirenSettings value="0" />
+    </Item>
+  </variationData>
+</CVehicleModelInfoVariation>

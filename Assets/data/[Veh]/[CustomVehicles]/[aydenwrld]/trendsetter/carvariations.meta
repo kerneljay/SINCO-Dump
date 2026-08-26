@@ -1,0 +1,52 @@
+<CVehicleModelInfoVariation>
+  <variationData>
+    <Item>
+      <modelName>trendsetter</modelName>
+          <colors>
+              <Item>
+                <indices content="char_array">
+                  0
+                  0
+                  0
+                  0
+                </indices>
+                <liveries>
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                  <Item value="false" />
+                </liveries>
+            </Item>
+          </colors>
+          <kits>
+            <Item>1431_trendsetter_modkit</Item>
+          </kits>
+          <plateProbabilities>
+              <Probabilities>
+                  <Item>
+                      <Name>Standard White</Name>
+                      <Value value="25.0" />
+                  </Item>
+                  <Item>
+                      <Name>White Plate 2</Name>
+                      <Value value="50.0" />
+                  </Item>
+                  <Item>
+                      <Name>Yellow Plate</Name>
+                      <Value value="15.0" />
+                  </Item>
+                  <Item>
+                      <Name>yankton plate</Name>
+                      <Value value="10.0" />
+                  </Item>
+              </Probabilities>
+            </plateProbabilities>
+            <lightSettings value="0" />
+            <sirenSettings value="0" />
+        </Item>
+    </variationData>
+</CVehicleModelInfoVariation>

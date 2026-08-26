@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVarGlobal>    
+  <Kits>
+     <Item>
+      <kitName>4574_biggestbird_modkit</kitName>
+      <id value="4574" />
+      <kitType>MKT_SPECIAL</kitType>
+      <visibleMods>
+            <Item>
+               <modelName>stancedump_chassis_1</modelName>
+               <modShopLabel>stancedump_chassis_1</modShopLabel>
+               <type>VMT_CHASSIS</type>
+               <bone>chassis</bone>
+               <collisionBone>chassis</collisionBone>
+               <cameraPos>VMCP_DEFAULT</cameraPos>
+               <audioApply value="1.0" />
+               <weight value="10" />
+               <turnOffExtra value="false" />
+               <disableBonnetCamera value="true" />
+               <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+               <modelName>stancedump_chassis_2</modelName>
+               <modShopLabel>stancedump_chassis_2</modShopLabel>
+               <type>VMT_CHASSIS</type>
+               <bone>chassis</bone>
+               <collisionBone>chassis</collisionBone>
+               <cameraPos>VMCP_DEFAULT</cameraPos>
+               <audioApply value="1.0" />
+               <weight value="10" />
+               <turnOffExtra value="false" />
+               <disableBonnetCamera value="true" />
+               <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+               <modelName>stancedump_chassis_3</modelName>
+               <modShopLabel>stancedump_chassis_3</modShopLabel>
+               <type>VMT_CHASSIS</type>
+               <bone>chassis</bone>
+               <collisionBone>chassis</collisionBone>
+               <cameraPos>VMCP_DEFAULT</cameraPos>
+               <audioApply value="1.0" />
+               <weight value="10" />
+               <turnOffExtra value="false" />
+               <disableBonnetCamera value="true" />
+               <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+               <modelName>stancedump_chassis_4</modelName>
+               <modShopLabel>stancedump_chassis_4</modShopLabel>
+               <type>VMT_CHASSIS</type>
+               <bone>chassis</bone>
+               <collisionBone>chassis</collisionBone>
+               <cameraPos>VMCP_DEFAULT</cameraPos>
+               <audioApply value="1.0" />
+               <weight value="10" />
+               <turnOffExtra value="false" />
+               <disableBonnetCamera value="true" />
+               <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+               <modelName>stancedump_roof_1</modelName>
+               <modShopLabel>stancedump_roof_1</modShopLabel>
+               <type>VMT_ROOF</type>
+               <bone>chassis</bone>
+               <collisionBone>chassis</collisionBone>
+               <cameraPos>VMCP_DEFAULT</cameraPos>
+               <audioApply value="1.0" />
+               <weight value="10" />
+               <turnOffExtra value="false" />
+               <disableBonnetCamera value="true" />
+               <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+               <modelName>stancedump_roof_2</modelName>
+               <modShopLabel>stancedump_roof_2</modShopLabel>
+               <type>VMT_ROOF</type>
+               <bone>chassis</bone>
+               <collisionBone>chassis</collisionBone>
+               <cameraPos>VMCP_DEFAULT</cameraPos>
+               <audioApply value="1.0" />
+               <weight value="10" />
+               <turnOffExtra value="false" />
+               <disableBonnetCamera value="true" />
+               <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+               <modelName>stancedump_roof_3</modelName>
+               <modShopLabel>stancedump_roof_3</modShopLabel>
+               <type>VMT_ROOF</type>
+               <bone>chassis</bone>
+               <collisionBone>chassis</collisionBone>
+               <cameraPos>VMCP_DEFAULT</cameraPos>
+               <audioApply value="1.0" />
+               <weight value="10" />
+               <turnOffExtra value="false" />
+               <disableBonnetCamera value="true" />
+               <allowBonnetSlide value="true" />
+            </Item>
+            <Item>
+               <modelName>stancedump_roof_4</modelName>
+               <modShopLabel>stancedump_roof_4</modShopLabel>
+               <type>VMT_ROOF</type>
+               <bone>chassis</bone>
+               <collisionBone>chassis</collisionBone>
+               <cameraPos>VMCP_DEFAULT</cameraPos>
+               <audioApply value="1.0" />
+               <weight value="10" />
+               <turnOffExtra value="false" />
+               <disableBonnetCamera value="true" />
+               <allowBonnetSlide value="true" />
+            </Item>
+      </visibleMods>
+      <statMods>
+            <Item>
+               <identifier />
+               <modifier value="10" />
+               <audioApply value="1.0" />
+               <weight value="20" />
+               <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="25" />
+               <audioApply value="1.0" />
+               <weight value="20" />
+               <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="80" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="100" />
+               <audioApply value="1.0" />
+               <weight value="60" />
+               <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="25" />
+               <audioApply value="1.0" />
+               <weight value="5" />
+               <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="75" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="100" />
+               <audioApply value="1.0" />
+               <weight value="30" />
+               <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="25" />
+               <audioApply value="1.0" />
+               <weight value="5" />
+               <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="75" />
+               <audioApply value="1.0" />
+               <weight value="5" />
+               <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="100" />
+               <audioApply value="1.0" />
+               <weight value="50" />
+               <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="20" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="40" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="60" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="100" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="100" />
+               <audioApply value="1.0" />
+               <weight value="40" />
+               <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="5" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="10" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="15" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="20" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+               <identifier />
+               <modifier value="25" />
+               <audioApply value="1.0" />
+               <weight value="0" />
+               <type>VMT_SUSPENSION</type>
+            </Item>
+            </statMods>
+        </Item>
+   </Kits>
+    <Lights />
+</CVehicleModelInfoVarGlobal>

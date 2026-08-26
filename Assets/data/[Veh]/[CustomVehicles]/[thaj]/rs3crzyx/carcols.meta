@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVarGlobal>    
+  <Kits>
+     <Item>
+      <kitName>37129133_rs3crzyx_modkit</kitName>
+      <id value="37129133" />
+      <kitType>MKT_SPECIAL</kitType>
+      <visibleMods>
+          <Item>
+              <modelName>rs3crzyx_orgspoilermiddle</modelName>
+              <modShopLabel>rs3crzyx_orgspoilermiddle</modShopLabel>
+              <type>VMT_PLTVANITY</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_plate</modelName>
+              <modShopLabel>rs3crzyx_plate</modShopLabel>
+              <type>VMT_PLTHOLDER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_plate1</modelName>
+              <modShopLabel>rs3crzyx_plate1</modShopLabel>
+              <type>VMT_PLTHOLDER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_plate2</modelName>
+              <modShopLabel>rs3crzyx_plate2</modShopLabel>
+              <type>VMT_PLTHOLDER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_plate3</modelName>
+              <modShopLabel>rs3crzyx_plate3</modShopLabel>
+              <type>VMT_PLTHOLDER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_prop</modelName>
+              <modShopLabel>rs3crzyx_prop</modShopLabel>
+              <type>VMT_INTERIOR1</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_prop1</modelName>
+              <modShopLabel>rs3crzyx_prop1</modShopLabel>
+              <type>VMT_INTERIOR1</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_f1light</modelName>
+              <modShopLabel>rs3crzyx_f1light</modShopLabel>
+              <type>VMT_CHASSIS5</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_f1light1</modelName>
+              <modShopLabel>rs3crzyx_f1light1</modShopLabel>
+              <type>VMT_CHASSIS5</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_bonnet</modelName>
+              <modShopLabel>rs3crzyx_bonnet</modShopLabel>
+              <turnOffBones>
+                  <Item>bonnet</Item>
+              </turnOffBones>
+              <type>VMT_BONNET</type>
+              <bone>bonnet</bone>
+              <collisionBone>bonnet</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_inte</modelName>
+              <modShopLabel>rs3crzyx_inte</modShopLabel>
+              <type>VMT_INTERIOR3</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_canards</modelName>
+              <modShopLabel>rs3crzyx_canards</modShopLabel>
+              <type>VMT_CHASSIS2</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_revobadge</modelName>
+              <modShopLabel>rs3crzyx_revobadge</modShopLabel>
+              <type>VMT_CHASSIS3</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_skirt</modelName>
+              <modShopLabel>rs3crzyx_skirt</modShopLabel>
+              <type>VMT_SKIRT</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_skirt1</modelName>
+              <modShopLabel>rs3crzyx_skirt1</modShopLabel>
+              <type>VMT_SKIRT</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_topspoiler</modelName>
+              <modShopLabel>rs3crzyx_topspoiler</modShopLabel>
+              <turnOffBones>
+                  <Item>misc_s</Item>
+                  <Item>misc_m</Item>
+              </turnOffBones>
+              <type>VMT_TRUNK</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_topspoiler1</modelName>
+              <modShopLabel>rs3crzyx_topspoiler1</modShopLabel>
+              <turnOffBones>
+                  <Item>misc_s</Item>
+                  <Item>misc_m</Item>
+              </turnOffBones>
+              <type>VMT_TRUNK</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_orgspoilertop</modelName>
+              <modShopLabel>rs3crzyx_orgspoilertop</modShopLabel>
+              <turnOffBones>
+                  <Item>misc_s</Item>
+                  <Item>misc_m</Item>
+              </turnOffBones>
+              <type>VMT_TRUNK</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_extraspoiler</modelName>
+              <modShopLabel>rs3crzyx_extraspoiler</modShopLabel>
+              <type>VMT_SPOILER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_extraspoiler1</modelName>
+              <modShopLabel>rs3crzyx_extraspoiler1</modShopLabel>
+              <type>VMT_SPOILER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_extraspoiler2</modelName>
+              <modShopLabel>rs3crzyx_extraspoiler2</modShopLabel>
+              <type>VMT_SPOILER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_extraspoiler3</modelName>
+              <modShopLabel>rs3crzyx_extraspoiler3</modShopLabel>
+              <type>VMT_SPOILER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_extraspoiler4</modelName>
+              <modShopLabel>rs3crzyx_extraspoiler4</modShopLabel>
+              <type>VMT_SPOILER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_extraspoiler5</modelName>
+              <modShopLabel>rs3crzyx_extraspoiler5</modShopLabel>
+              <type>VMT_SPOILER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_extraspoiler6</modelName>
+              <modShopLabel>rs3crzyx_extraspoiler6</modShopLabel>
+              <type>VMT_SPOILER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_extraspoiler7</modelName>
+              <modShopLabel>rs3crzyx_extraspoiler7</modShopLabel>
+              <type>VMT_SPOILER</type>
+              <bone>boot</bone>
+              <collisionBone>boot</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_rearthing</modelName>
+              <modShopLabel>rs3crzyx_rearthing</modShopLabel>
+              <type>VMT_GRILL</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_rearthing1</modelName>
+              <modShopLabel>rs3crzyx_rearthing1</modShopLabel>
+              <type>VMT_GRILL</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_rearthing2</modelName>
+              <modShopLabel>rs3crzyx_rearthing2</modShopLabel>
+              <type>VMT_GRILL</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_diffuser</modelName>
+              <modShopLabel>rs3crzyx_diffuser</modShopLabel>
+              <type>VMT_BUMPER_R</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_diffuser1</modelName>
+              <modShopLabel>rs3crzyx_diffuser1</modShopLabel>
+              <type>VMT_BUMPER_R</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_diffuser2</modelName>
+              <modShopLabel>rs3crzyx_diffuser2</modShopLabel>
+              <type>VMT_BUMPER_R</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_diffuser3</modelName>
+              <modShopLabel>rs3crzyx_diffuser3</modShopLabel>
+              <turnOffBones>
+                  <Item>misc_c</Item>
+                  <Item>exhaust_2</Item>
+                  <Item>exhaust</Item>
+              </turnOffBones>
+              <type>VMT_EXHAUST</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_frontsplitter</modelName>
+              <modShopLabel>rs3crzyx_frontsplitter</modShopLabel>
+              <type>VMT_BUMPER_F</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_frontsplitter1</modelName>
+              <modShopLabel>rs3crzyx_frontsplitter1</modShopLabel>
+              <type>VMT_BUMPER_F</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_frontsplitter2</modelName>
+              <modShopLabel>rs3crzyx_frontsplitter2</modShopLabel>
+              <type>VMT_BUMPER_F</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_exhaust</modelName>
+              <modShopLabel>rs3crzyx_exhaust</modShopLabel>
+              <turnOffBones>
+                  <Item>misc_c</Item>
+                  <Item>exhaust_2</Item>
+                  <Item>exhaust</Item>
+              </turnOffBones>
+              <type>VMT_EXHAUST</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_exhaust1</modelName>
+              <modShopLabel>rs3crzyx_exhaust1</modShopLabel>
+              <turnOffBones>
+                  <Item>misc_c</Item>
+                  <Item>exhaust_2</Item>
+                  <Item>exhaust</Item>
+              </turnOffBones>
+              <type>VMT_EXHAUST</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_exroof_01</modelName>
+              <modShopLabel>rs3_exroof_01</modShopLabel>
+              <type>VMT_CHASSIS</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_exroof_02</modelName>
+              <modShopLabel>rs3_exroof_02</modShopLabel>
+              <type>VMT_CHASSIS</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+          <Item>
+              <modelName>rs3crzyx_exroof_03</modelName>
+              <modShopLabel>rs3_exroof_03</modShopLabel>
+              <type>VMT_CHASSIS</type>
+              <bone>chassis</bone>
+              <collisionBone>chassis</collisionBone>
+              <cameraPos>VMCP_DEFAULT</cameraPos>
+              <audioApply value="1.0" />
+              <weight value="20" />
+              <turnOffExtra value="false" />
+              <disableBonnetCamera value="false" />
+              <allowBonnetSlide value="true" />
+          </Item>
+      </visibleMods>
+      <linkMods />
+        <statMods>
+            <Item>
+                <identifier />
+                <modifier value="25" />
+                <audioApply value="1.0" />
+                <weight value="20" />
+                <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="50" />
+                <audioApply value="1.0" />
+                <weight value="20" />
+                <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="75" />
+                <audioApply value="1.0" />
+                <weight value="20" />
+                <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="100" />
+                <audioApply value="1.0" />
+                <weight value="20" />
+                <type>VMT_ENGINE</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="25" />
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="50" />
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="100" />
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <type>VMT_BRAKES</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="25" />
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="50" />
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="100" />
+                <audioApply value="1.0" />
+                <weight value="5" />
+                <type>VMT_GEARBOX</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="20" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="40" />
+                <audioApply value="1.0" />
+                <weight value="10" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="60" />
+                <audioApply value="1.0" />
+                <weight value="20" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="80" />
+                <audioApply value="1.0" />
+                <weight value="30" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="100" />
+                <audioApply value="1.0" />
+                <weight value="40" />
+                <type>VMT_ARMOUR</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="5" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="10" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="15" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="20" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+            <Item>
+                <identifier />
+                <modifier value="24" />
+                <audioApply value="1.0" />
+                <weight value="0" />
+                <type>VMT_SUSPENSION</type>
+            </Item>
+        </statMods>
+      <slotNames />
+      <liveryNames />
+    </Item>
+   </Kits>
+    <Lights>
+            <Item>
+            <id value="9882" />
+            <indicator>
+                <intensity value="0.375" />
+                <falloffMax value="2.5" />
+                <falloffExponent value="8.0" />
+                <innerConeAngle value="20.0" />
+                <outerConeAngle value="50.0" />
+                <emmissiveBoost value="true" />
+                <color value="0xffE86209" />
+            </indicator>
+            <rearIndicatorCorona>
+                <size value="0.0" />
+                <size_far value="0.0" />
+                <intensity value="0.0" />
+                <intensity_far value="0.0" />
+                <color value="0x00000000" />
+                <numCoronas value="1" />
+                <distBetweenCoronas value="128.0" />
+                <distBetweenCoronas_far value="255.0" />
+                <xRotation value="0.0" />
+                <yRotation value="0.0" />
+                <zRotation value="0.0" />
+                <zBias value="0.25" />
+                <pullCoronaIn value="false" />
+            </rearIndicatorCorona>
+            <frontIndicatorCorona>
+                <size value="0.0" />
+                <size_far value="0.0" />
+                <intensity value="0.0" />
+                <intensity_far value="0.0" />
+                <color value="0x00000000" />
+                <numCoronas value="1" />
+                <distBetweenCoronas value="128.0" />
+                <distBetweenCoronas_far value="255.0" />
+                <xRotation value="0.0" />
+                <yRotation value="0.0" />
+                <zRotation value="0.0" />
+                <zBias value="0.25" />
+                <pullCoronaIn value="false" />
+            </frontIndicatorCorona>
+            <tailLight>
+                <intensity value="0.25" />
+                <falloffMax value="4.0" />
+                <falloffExponent value="16.0" />
+                <innerConeAngle value="45.0" />
+                <outerConeAngle value="90.0" />
+                <emmissiveBoost value="false" />
+                <color value="0xFFFF0000" />
+            </tailLight>
+            <tailLightCorona>
+                <size value="0.0" />
+                <size_far value="0.0" />
+                <intensity value="5.0" />
+                <intensity_far value="1.0" />
+                <color value="0xFFFF0F05" />
+                <numCoronas value="0" />
+                <distBetweenCoronas value="1.0" />
+                <distBetweenCoronas_far value="56.0" />
+                <xRotation value="0.0" />
+                <yRotation value="1.747" />
+                <zRotation value="5.906" />
+                <zBias value="0.25" />
+                <pullCoronaIn value="false" />
+            </tailLightCorona>
+            <tailLightMiddleCorona>
+                <size value="0.0" />
+                <size_far value="0.0" />
+                <intensity value="0.0" />
+                <intensity_far value="0.0" />
+                <color value="0x00000000" />
+                <numCoronas value="0" />
+                <distBetweenCoronas value="128.0" />
+                <distBetweenCoronas_far value="255.0" />
+                <xRotation value="0.0" />
+                <yRotation value="0.0" />
+                <zRotation value="0.0" />
+                <zBias value="0.25" />
+                <pullCoronaIn value="false" />
+            </tailLightMiddleCorona>
+            <headLight>
+                <intensity value="1.8" />
+                <falloffMax value="30.0" />
+                <falloffExponent value="16.0" />
+                <innerConeAngle value="45.0" />
+                <outerConeAngle value="60.21" />
+                <emmissiveBoost value="false" />
+                <color value="0xFFB0C7EB" />
+                <textureName>VehicleLight_car_LED1</textureName>
+                <mirrorTexture value="false" />
+            </headLight>
+            <headLightCorona>
+                <size value="0.1" />
+                <size_far value="0.1" />
+                <intensity value="2.0" />
+                <intensity_far value="1.0" />
+                <color value="0xFFd1fbff" />
+                <numCoronas value="1" />
+                <distBetweenCoronas value="128.0" />
+                <distBetweenCoronas_far value="255.0" />
+                <xRotation value="0.0" />
+                <yRotation value="0.0" />
+                <zRotation value="0.0" />
+                <zBias value="0.25" />
+                <pullCoronaIn value="false" />
+            </headLightCorona>
+            <reversingLight>
+                <intensity value="0.03" />
+                <falloffMax value="2.0" />
+                <falloffExponent value="32.0" />
+                <innerConeAngle value="45.0" />
+                <outerConeAngle value="90.0" />
+                <emmissiveBoost value="false" />
+                <color value="0xFFFFFFFF" />
+            </reversingLight>
+            <reversingLightCorona>
+                <size value="0.0" />
+                <size_far value="0.0" />
+                <intensity value="1.5" />
+                <intensity_far value="1.0" />
+                <color value="0x00F7F7F7" />
+                <numCoronas value="0" />
+                <distBetweenCoronas value="128.0" />
+                <distBetweenCoronas_far value="255.0" />
+                <xRotation value="0.0" />
+                <yRotation value="0.0" />
+                <zRotation value="0.0" />
+                <zBias value="0.25" />
+                <pullCoronaIn value="false" />
+            </reversingLightCorona>
+            <name>rs3crzyx</name>
+        </Item>
+      </Lights>
+</CVehicleModelInfoVarGlobal>

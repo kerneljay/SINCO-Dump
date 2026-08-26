@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+        html, body {
+            background: transparent !important;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="disputeNotification" class="dispute-notif-container" style="display: none;">
+        <div>
+            <div id="disputeNotiTitle" class="dispute-notif-header">Dispute System</div>
+            <div class="dispute-notif-body">
+                <div id="disputeNotiDesc" class="dispute-notif-tile">U think u the shit bitch... U not even the fart</div>
+                <div class="dispute-notif-img-tile">
+                    <img class="dispute-notif-img" src="assets/noti.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dispute-background hide" id="dispute-background">
+        <div class="dispute-container hide" id="dispute-container">
+            <div class="dispute-screen hide" id="dispute-screen">
+                <div class="dispute-header">
+                    <div class="dispute-header-line"></div>
+                    <div class="dispute-title-container">
+                        <h1 class="dispute-title">Dispute System</h1>
+                        <p class="dispute-subtitle">Message a player about a recent encounter</p>
+                    </div>
+                    <div class="dispute-header-report" id="dispute-report">
+                        <div class="dispute-header-image-container"></div>
+                        <div class="dispute-header-report-text">
+                            <div class="dispute-report-title">Found a bug?</div>
+                            <div class="dispute-report-subtitle">Report it here</div>
+                        </div>
+                    </div>
+                    <button class="dispute-close-btn" id="dispute-close" title="Close">×</button>
+                </div>
+                <div class="dispute-body">
+                    <div class="dispute-players">
+                        <div class="dispute-body-header">
+                            <div class="dispute-body-line"></div>
+                            <div class="dispute-body-title">Select Player</div>
+                            <div id="dispute-players-search-container" class="dispute-players-search-container">
+                                <input id="dispute-players-search" class="dispute-players-search" type="text" placeholder="Search...">
+                            </div>
+                        </div>
+                        <div class="dispute-players-list" id="dispute-players-list">
+                            <div class="dispute-players-item">
+                                <div class="dispute-player-info">
+                                    <h4 id="dispute-player-name" class="dispute-player-name">mkay</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dispute-search-disclaimer">Only players who have recently damaged you will show in this list</div>
+                    </div>
+                    <div class="dispute-inbox">
+                        <div class="dispute-body-header">
+                            <div class="dispute-body-line"></div>
+                            <div class="dispute-body-title">Player Info</div>
+                        </div>
+                        <div class="dispute-inbox-content">
+                            <div class="dispute-inbox-item">
+                                <div class="dispute-inbox-content">
+                                    <div class="dispute-inbox-title">ID</div>
+                                    <div class="dispute-inbox-desc" id="inbox-desc-id">N/A</div>
+                                </div>
+                                <div class="dispute-inbox-content">
+                                    <div class="dispute-inbox-title">Name</div>
+                                    <div class="dispute-inbox-desc" id="inbox-desc-name">N/A</div>
+                                </div>
+                                <button class="dispute-action-btn" id="muteButton" title="Mute">
+                                    <img class="dispute-inbox-icon" src="assets/mute.png" alt="Mute">
+                                </button>
+                                <button class="dispute-action-btn" id="blockButton" title="Block">
+                                    <img class="dispute-inbox-icon" src="assets/block.png" alt="Block">
+                                </button>
+                                <button class="dispute-action-btn" id="deleteButton" title="Delete">
+                                    <img class="dispute-inbox-icon" src="assets/del.png" alt="Delete">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dispute-messages">
+                        <div class="dispute-body-header">
+                            <div class="dispute-body-line"></div>
+                            <div class="dispute-body-title">Messages</div>
+                        </div>
+                        <div class="dispute-messages-list" id="dispute-messages-list">
+                        </div>
+                        <div class="dispute-message-input-container">
+                            <div class="dispute-message-input-wrapper">
+                                <input class="dispute-message-input" type="text" placeholder="Type a message...">
+                                <button class="dispute-message-button">
+                                    <img class="dispute-message-icon" src="assets/send.png" alt="Send">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../jquery.min.js?v=20260819jq2"></script>
+    <script src="js/main.js?v=20260819jq2"></script>
+</body>
+</html>

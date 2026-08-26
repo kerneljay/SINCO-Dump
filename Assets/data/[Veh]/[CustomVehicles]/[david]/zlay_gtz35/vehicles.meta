@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfo__InitDataList>
+  <residentTxd>vehshare</residentTxd>
+  <residentAnims />
+  <InitDatas>
+   <Item>
+	<modelName>zlay_gtz35</modelName>
+	<txdName>zlay_gtz35</txdName>
+	<handlingId>zlay_gtz35</handlingId>
+	<gameName>zlay_gtz35</gameName>
+	<vehicleMakeName>NISSAN</vehicleMakeName>
+	<expressionDictName>null</expressionDictName>
+	<expressionName>null</expressionName>
+	<animConvRoofDictName>null</animConvRoofDictName>
+	<animConvRoofName>null</animConvRoofName>
+	<ptfxAssetName>veh_zlay_gtz35</ptfxAssetName>
+	<audioNameHash>OSIRIS</audioNameHash>
+	<layout>LAYOUT_STANDARD</layout>
+	<coverBoundOffsets>zlay_gtz35_COVER_OFFSET_INFO</coverBoundOffsets>
+	<explosionInfo>EXPLOSION_INFO_DEFAULT</explosionInfo>
+	<scenarioLayout />
+	<cameraName>DEFAULT_FOLLOW_VEHICLE_CAMERA</cameraName>
+	<aimCameraName>DEFAULT_THIRD_PERSON_VEHICLE_AIM_CAMERA</aimCameraName>
+	<bonnetCameraName>VEHICLE_BONNET_CAMERA_NEAR_EXTRA_HIGH</bonnetCameraName>
+	<povCameraName>DEFAULT_POV_CAMERA</povCameraName>
+	<FirstPersonDriveByIKOffset x="0" y="-0.02" z="-0.02" />
+	<FirstPersonDriveByUnarmedIKOffset x="0" y="-0.035" z="0" />
+	<FirstPersonProjectileDriveByIKOffset x="0" y="0" z="-0.01" />
+	<FirstPersonProjectileDriveByPassengerIKOffset x="0" y="0" z="-0.01" />
+	<FirstPersonProjectileDriveByRearLeftIKOffset x="0" y="0" z="0" />
+	<FirstPersonProjectileDriveByRearRightIKOffset x="0" y="0" z="0" />
+	<FirstPersonDriveByLeftPassengerIKOffset x="0" y="0" z="0" />
+	<FirstPersonDriveByRightPassengerIKOffset x="0" y="-0.02" z="0" />
+	<FirstPersonDriveByRightRearPassengerIKOffset x="0" y="0" z="0" />
+	<FirstPersonDriveByLeftPassengerUnarmedIKOffset x="0" y="0" z="0" />
+	<FirstPersonDriveByRightPassengerUnarmedIKOffset x="0" y="-0.045" z="0" />
+	<FirstPersonMobilePhoneOffset x="0.118" y="0.288" z="0.558" />
+	<FirstPersonPassengerMobilePhoneOffset x="0.135" y="0.205" z="0.475" />
+	<PovCameraOffset x="0" y="-0.2" z="0.6" />
+	<PovCameraVerticalAdjustmentForRollCage value="0.0" />
+	<PovPassengerCameraOffset x="0" y="0" z="0" />
+	<PovRearPassengerCameraOffset x="0" y="0" z="0" />
+	<vfxInfoName>VFXVEHICLEINFO_CAR_GENERIC</vfxInfoName>
+	<shouldUseCinematicViewMode value="true" />
+	<shouldCameraTransitionOnClimbUpDown value="false" />
+	<shouldCameraIgnoreExiting value="false" />
+	<AllowPretendOccupants value="true" />
+	<AllowJoyriding value="true" />
+	<AllowSundayDriving value="true" />
+	<AllowBodyColorMapping value="true" />
+	<wheelScale value="0.2951" />
+	<wheelScaleRear value="0.2951" />
+	<dirtLevelMin value="0.0" />
+	<dirtLevelMax value="0.55" />
+	<envEffScaleMin value="0.0" />
+	<envEffScaleMax value="1.0" />
+	<envEffScaleMin2 value="0.0" />
+	<envEffScaleMax2 value="1.0" />
+	<damageMapScale value="0.6" />
+	<damageOffsetScale value="1.0" />
+	<diffuseTint value="0x00FFFFFF" />
+	<steerWheelMult value="1.0" />
+	<HDTextureDist value="5.0" />
+	<lodDistances content="float_array">
+        500.000000
+        500.000000
+        500.000000
+        500.000000
+        500.000000
+        500.000000
+      </lodDistances>
+	<minSeatHeight value="0.871" />
+	<identicalModelSpawnDistance value="20" />
+	<maxNumOfSameColor value="1" />
+	<defaultBodyHealth value="1000.0" />
+	<pretendOccupantsScale value="1.0" />
+	<visibleSpawnDistScale value="1.0" />
+	<trackerPathWidth value="2.0" />
+	<weaponForceMult value="1.0" />
+	<frequency value="30" />
+	<swankness>SWANKNESS_5</swankness>
+	<maxNum value="4" />
+	<flags>FLAG_AVERAGE_CAR FLAG_HAS_EXTRA_ALL FLAG_HAS_INTERIOR_EXTRAS FLAG_SPORTS FLAG_SPAWN_ON_TRAILER FLAG_RICH_CAR FLAG_NO_BROKEN_DOWN_SCENARIO FLAG_CAN_HAVE_NEONS FLAG_AVERAGE_CAR FLAG_HAS_LIVERY FLAG_PARKING_SENSORS FLAG_RESPRAY FLAG_EXTRAS_STRONG FLAG_HAS_LOWRIDER_HYDRAULICS</flags>
+	<type>VEHICLE_TYPE_CAR</type>
+	<plateType>VPT_BACK_PLATES</plateType>
+	<dashboardType>VDT_RACE</dashboardType>
+	<vehicleClass>VC_COMMERCIAL</vehicleClass>
+	<wheelType>VWT_SPORT</wheelType>
+	<bumpersNeedToCollideWithMap value="false" />
+	<needsRopeTexture value="false" />
+	<requiredExtras />
+	<cinematicPartCamera>
+		<Item>WHEEL_FRONT_RIGHT_CAMERA</Item>
+		<Item>WHEEL_FRONT_LEFT_CAMERA</Item>
+		<Item>WHEEL_REAR_RIGHT_CAMERA</Item>
+		<Item>WHEEL_REAR_LEFT_CAMERA</Item>
+	</cinematicPartCamera>
+	<NmBraceOverrideSet />
+	<buoyancySphereOffset x="0" y="0" z="0" />
+	<buoyancySphereSizeScale value="1.0" />
+	<firstPersonDrivebyData>
+		<Item>LOW_zlay_gtz35_FRONT_LEFT</Item>
+		<Item>LOW_zlay_gtz35_FRONT_RIGHT</Item>
+	</firstPersonDrivebyData>
+</Item>
+  </InitDatas>
+  <txdRelationships>
+	<Item>
+      <parent>vehicles_race_generic</parent>
+      <child>zlay_gtz35</child>
+    </Item>
+  </txdRelationships>
+</CVehicleModelInfo__InitDataList>

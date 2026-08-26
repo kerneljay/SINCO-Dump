@@ -1,0 +1,368 @@
+.color-0 {
+    color: #ffffff;
+}
+
+.color-1 {
+    color: #ff4444;
+}
+
+.color-2 {
+    color: #99cc00;
+}
+
+.color-3 {
+    color: #ffbb33;
+}
+
+.color-4 {
+    color: #0099cc;
+}
+
+.color-5 {
+    color: #33b5e5;
+}
+
+.color-6 {
+    color: #aa66cc;
+}
+
+.color-8 {
+    color: #cc0000;
+}
+
+.color-9 {
+    color: #cc0068;
+}
+
+* {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.no-grow {
+    flex-grow: 0;
+}
+
+em {
+    font-style: normal;
+}
+
+#app {
+    font-family: 'Rajdhani', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+}
+
+.chat-window {
+    position: relative;
+    top: 1.5%;
+    left: 0.8%;
+    width: 30%;
+    height: 22%;
+    max-width: 1000px;
+    background-color: transparent;
+    -webkit-animation-duration: 2s;
+}
+
+.chat-messages {
+    position: relative;
+    height: 320px;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 0 0 0;
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.chat-input {
+    font-size: 1.65vh;
+    position: relative;
+    left: 0.8%;
+    width: 30%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+.chat-input > div {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    background: #0066ff;
+    border: none;
+    border-radius: 0px;
+}
+
+.prefix {
+    font-size: 1.8vh;
+    position: absolute;
+    margin-top: 0.5%;
+    left: 0.208%;
+    color: rgba(66, 145, 243, 0.9);
+    text-shadow: none;
+}
+
+textarea {
+    font-size: 1.65vh;
+    display: block;
+    box-sizing: border-box;
+    padding: 1%;
+    padding-left: 3.5%;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+    border-width: 0;
+    height: 3.15%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.msg {
+    margin-bottom: 5px;
+    padding: 3px 3px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.msgText {
+    top: 0px;
+    position: relative;
+    font-weight: 700;
+}
+
+.msgText-trans {
+    top: 0px;
+    position: relative;
+    opacity: 0.75;
+    font-weight: 700;
+}
+
+.global {
+    background: linear-gradient(135deg, rgba(66, 145, 243, 0.35), rgba(50, 120, 200, 0.35));
+}
+
+.global-trans {
+    background: linear-gradient(135deg, rgba(66, 145, 243, 0.2), rgba(50, 120, 200, 0.2));
+}
+
+.ooc {
+    background-color: rgba(64,64,64, 0.35)
+}
+
+.ooc-trans {
+    background-color: rgba(64,64,64, 0.2)
+}
+
+.alert {
+    background-color: rgba(255, 0, 6, 0.35);
+}
+
+.alert-trans {
+    background-color: rgba(255, 0, 6, 0.2);
+}
+
+.green {
+    background-color: rgba(43, 255, 0, 0.35);
+}
+
+.green-trans {
+    background-color: rgba(43, 255, 0, 0.2);
+}
+
+.eventalert {
+    background-color: rgba(128, 0, 128, 0.35);
+}
+
+.eventalert-trans {
+    background-color: rgba(128, 0, 128, 0.2);
+}
+
+.staff {
+    background-color: rgba(226, 255, 98, 0.534);
+}
+
+.police {
+    background-color: rgba(86, 138, 250, 0.534);
+}
+
+.faction {
+    background-color: rgba(255, 175, 71, 0.534);
+}
+
+.msgIcon {
+    align-self: flex-start;
+}
+
+.msgIcon-trans {
+    align-self: flex-start;
+    opacity: 0.5;
+}
+
+.multiline {
+    /*margin-left: 4%;*/
+    text-indent: 0.5rem;
+    vertical-align: middle;
+    white-space: pre-line;
+}
+
+.suggestions {
+    list-style-type: none;
+    padding: 4px 20px;
+    margin: 0;
+    font-size: 1.5vh;
+    box-sizing: border-box;
+    color: white;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    width: 100%;
+    max-width: 100%;
+    max-height: 120px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: default;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.suggestions::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.suggestions::before {
+    display: none;
+}
+
+
+.help {
+    color: #a0a0a0;
+    font-size: 1.1vh;
+    margin-top: 2px;
+    display: block;
+}
+
+.disabled {
+    color: #707070;
+}
+
+.suggestion {
+    margin-bottom: 2px;
+    padding: 4px 14px;
+    border-radius: 6px;
+    background: transparent;
+    border: none;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.suggestion::before {
+    display: none;
+}
+
+.suggestion:hover {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.suggestion:hover span:not(.param):not(.disabled) {
+    color: rgba(66, 145, 243, 0.9);
+}
+
+.suggestion:hover span:not(.param):not(.disabled)::first-letter {
+    color: white;
+}
+
+.suggestion:hover .help {
+    color: rgba(66, 145, 243, 0.7);
+}
+
+.suggestion.selected {
+    background: transparent;
+    border: none;
+}
+
+.suggestion.selected span:not(.param):not(.disabled) {
+    color: rgba(66, 145, 243, 0.9);
+}
+
+.suggestion.selected span:not(.param):not(.disabled)::first-letter {
+    color: white;
+}
+
+.param {
+    color: #90ee90;
+    margin-left: 5px;
+}
+
+.highlight-match {
+    color: #ffffff !important;
+    font-weight: bold;
+    text-shadow: 
+        0 0 1px rgba(255, 255, 255, 0.4),
+        0 0 1.5px rgba(255, 255, 255, 0.3),
+        0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        text-shadow: 
+            0 0 1px rgba(255, 255, 255, 0.4),
+            0 0 1.5px rgba(255, 255, 255, 0.3),
+            0 0 2px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        text-shadow: 
+            0 0 2px rgba(255, 255, 255, 1),
+            0 0 3px rgba(255, 255, 255, 0.8),
+            0 0 4px rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+.hidden {
+}
+
+.chat-mention {
+    background-color: rgba(66, 145, 243, 0.6) !important;
+    border: 2px solid rgba(66, 145, 243, 0.8) !important;
+    border-radius: 8px !important;
+    padding: 4px 8px !important;
+    margin: 2px 0 !important;
+    box-shadow: 0 0 10px rgba(66, 145, 243, 0.5) !important;
+    animation: mention-pulse 2s ease-in-out infinite !important;
+}
+
+@keyframes mention-pulse {
+    0% {
+        background-color: rgba(66, 145, 243, 0.6);
+        box-shadow: 0 0 10px rgba(66, 145, 243, 0.5);
+    }
+    50% {
+        background-color: rgba(66, 145, 243, 0.8);
+        box-shadow: 0 0 15px rgba(66, 145, 243, 0.7);
+    }
+    100% {
+        background-color: rgba(66, 145, 243, 0.6);
+        box-shadow: 0 0 10px rgba(66, 145, 243, 0.5);
+    }
+}

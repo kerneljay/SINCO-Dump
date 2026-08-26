@@ -1,0 +1,437 @@
+/* Chat – modern, responsive, resolution-independent */
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../html/fonts/Proxima-Nova.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --chat-bg: rgba(0, 0, 0, 0.35);
+  --chat-border: rgba(255, 255, 255, 0.1);
+  --chat-input-bg: rgba(0, 0, 0, 0.3);
+  --chat-text: #f4f4f5;
+  --chat-text-muted: #a1a1aa;
+  --chat-radius: 10px;
+  --chat-radius-sm: 6px;
+  --chat-gap: clamp(0.25rem, 1vh, 0.5rem);
+  --chat-msg-font: clamp(0.8rem, 1.5vh, 2vh);
+  --chat-input-font: clamp(0.85rem, 1.75vh, 2.2vh);
+  --chat-width: 30%;
+  --chat-width-max: 1000px;
+  --chat-msg-height: 320px;
+  --bubble-bg: rgba(39, 39, 42, 0.55);
+  --accent-blue: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Proxima Nova", 'Lato', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--chat-text);
+  overflow: hidden;
+}
+
+#app {
+  position: fixed;
+  top: 1.5%;
+  left: 0.4%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  pointer-events: none;
+}
+
+#app > * {
+  pointer-events: auto;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+/* ---------- Message window ---------- */
+.chat-column {
+  width: var(--chat-width);
+  max-width: var(--chat-width-max);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 0.5%;
+  box-sizing: border-box;
+}
+
+.chat-window {
+  width: 100%;
+  height: 22%;
+  border-radius: var(--chat-radius);
+  background: transparent;
+  border: none;
+  overflow: hidden;
+  transition: opacity 0.35s ease;
+}
+
+.chat-window.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chat-window.hidden.animated {
+  transition: opacity 0.5s ease;
+}
+
+.chat-messages {
+  height: var(--chat-msg-height);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: var(--chat-gap);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--chat-gap);
+  font-size: var(--chat-msg-font);
+  line-height: 1.4;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Messages (bubble with left accent bar) ---------- */
+.msg-bubble {
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+  border-radius: var(--chat-radius);
+  font-size: var(--chat-msg-font);
+  word-break: break-word;
+  overflow: hidden;
+  background: var(--bubble-bg);
+}
+
+.msg-accent {
+  width: 4px;
+  min-width: 4px;
+  flex-shrink: 0;
+  border-radius: var(--chat-radius) 0 0 var(--chat-radius);
+  background: var(--accent-blue);
+}
+
+.msg-bubble .msg-accent.global { background: var(--accent-blue); }
+.msg-bubble .msg-accent.rp { background: #a855f7; }
+.msg-bubble .msg-accent.ooc { background: var(--accent-blue); }
+.msg-bubble .msg-accent.twt { background: #1d9bf0; }
+.msg-bubble .msg-accent.alert { background: #ef4444; }
+.msg-bubble .msg-accent.goodalert { background: #22c55e; }
+.msg-bubble .msg-accent.casinowin { background: #22c55e; }
+.msg-bubble .msg-accent.bluealert { background: #3b82f6; }
+.msg-bubble .msg-accent.eventalert { background: #a855f7; }
+.msg-bubble .msg-accent.cmg_admin { background: #eab308; }
+.msg-bubble .msg-accent.tip { background: #f97316; }
+.msg-bubble.chat-mention .msg-accent { background: #eab308; }
+.msg-bubble.chat-permmention .msg-accent { background: #a855f7; }
+
+/* Event — purple side accent only */
+.msg-bubble.eventalert-trans {
+  background: rgba(39, 39, 42, 0.4);
+}
+
+/* Announcements (/announce): whole bubble background */
+.msg-bubble.alert {
+  background: #ef4444;
+  color: #ffffff;
+}
+.msg-bubble.alert .msgText,
+.msg-bubble.alert .msgText span {
+  color: #ffffff !important;
+}
+.msg-bubble.alert .msg-accent.alert {
+  background: rgba(255, 255, 255, 0.25);
+}
+.msg-bubble.alert-trans {
+  background: rgba(239, 68, 68, 0.55);
+}
+.msg-bubble.alert-trans .msg-accent.alert {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Casino wins: whole bubble background (green) */
+.msg-bubble.casinowin {
+  background: #22c55e;
+}
+.msg-bubble.casinowin .msg-accent.casinowin {
+  background: rgba(255, 255, 255, 0.25);
+}
+.msg-bubble.casinowin-trans {
+  background: rgba(34, 197, 94, 0.55);
+}
+.msg-bubble.casinowin-trans .msg-accent.casinowin {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Success / event wins (same treatment as casino green — was accent-only before) */
+.msg-bubble.goodalert {
+  background: #22c55e;
+}
+.msg-bubble.goodalert .msg-accent.goodalert {
+  background: rgba(255, 255, 255, 0.25);
+}
+.msg-bubble.goodalert-trans {
+  background: rgba(34, 197, 94, 0.55);
+}
+.msg-bubble.goodalert-trans .msg-accent.goodalert {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Info broadcasts */
+.msg-bubble.bluealert {
+  background: #3b82f6;
+}
+.msg-bubble.bluealert .msg-accent.bluealert {
+  background: rgba(255, 255, 255, 0.25);
+}
+.msg-bubble.bluealert-trans {
+  background: rgba(59, 130, 246, 0.55);
+}
+.msg-bubble.bluealert-trans .msg-accent.bluealert {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* SINCO Tips — accent bar only (not full bubble fill) */
+.msg-bubble.tip-trans {
+  background: rgba(39, 39, 42, 0.4);
+}
+
+.msg-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45em;
+  padding: clamp(0.28rem, 0.6vh, 0.4rem) clamp(0.45rem, 1vw, 0.6rem);
+  flex: 1;
+  min-width: 0;
+}
+
+.msg-icon {
+  flex-shrink: 0;
+  width: 1em;
+  height: 1.35em;
+  line-height: 1.35;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.msgText,
+.msgText-trans {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.msgText-trans {
+  opacity: 0.82;
+}
+
+.multiline {
+  white-space: pre-line;
+  text-indent: 0;
+}
+
+/* Transparent (older) bubbles – more transparent (do not list alert/goodalert/casinowin/bluealert/event -trans here or their tinted backgrounds get overridden) */
+.msg-bubble.global-trans,
+.msg-bubble.ooc-trans,
+.msg-bubble.twt-trans {
+  background: rgba(39, 39, 42, 0.4);
+}
+
+/* Mention highlights */
+.chat-mention {
+  background: rgba(39, 39, 42, 0.6);
+}
+
+.chat-mention-name {
+  color: #eab308 !important;
+  font-weight: 600;
+}
+
+.chat-permmention {
+  background: rgba(39, 39, 42, 0.6);
+}
+
+/* ---------- Input area ---------- */
+.chat-input {
+  width: 100%;
+  margin-top: var(--chat-gap);
+  padding: 0 var(--chat-gap);
+  box-sizing: border-box;
+  font-size: var(--chat-input-font);
+}
+
+.chat-input > div.input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: var(--bubble-bg);
+  border: none;
+  border-radius: var(--chat-radius);
+  overflow: hidden;
+  min-height: clamp(2rem, 4.5vh, 2.75rem);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.prefix,
+.suffix {
+  flex-shrink: 0;
+  padding: 0 clamp(0.4rem, 1vw, 0.6rem);
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #fff !important;
+}
+
+.prefix {
+  padding-right: 0.25em;
+}
+
+.suffix {
+  padding-left: 0.25em;
+  font-size: 0.7em;
+  opacity: 0.7;
+}
+
+.chat-input textarea {
+  flex: 1;
+  min-width: 0;
+  padding: clamp(0.4rem, 1vh, 0.55rem) 0.5rem;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--chat-text);
+  background: transparent;
+  border: none;
+  resize: none;
+  line-height: 1.4;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chat-input textarea::placeholder {
+  color: var(--chat-text-muted);
+}
+
+.chat-input textarea:focus,
+.chat-input input:focus {
+  outline: none;
+}
+
+.chat-input textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-hide-state {
+  margin-top: 0.35em;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--chat-text-muted);
+}
+
+/* ---------- Suggestions ---------- */
+.suggestions-wrap {
+  width: 100%;
+  max-width: none;
+  margin-top: var(--chat-gap);
+}
+
+.suggestions {
+  list-style: none;
+  background: var(--chat-input-bg);
+  border: 1px solid var(--chat-border);
+  border-radius: var(--chat-radius);
+  overflow: hidden;
+  font-size: var(--chat-input-font);
+}
+
+.suggestion {
+  padding: clamp(0.22rem, 0.5vh, 0.35rem) clamp(0.5rem, 1vw, 0.65rem);
+  border-bottom: 1px solid var(--chat-border);
+}
+
+.suggestion:last-child {
+  border-bottom: none;
+}
+
+.suggestion p {
+  margin: 0;
+  font-weight: 500;
+  color: var(--chat-text);
+}
+
+.suggestion .param {
+  margin-left: 0.25em;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.suggestion small.help {
+  display: block;
+  margin-top: 0.12em;
+  font-size: 0.85em;
+  color: var(--chat-text-muted);
+}
+
+.suggestion .disabled {
+  color: var(--chat-text-muted);
+  opacity: 0.8;
+}
+
+/* ---------- Inline colors (templates) ---------- */
+.color-0 { color: #ffffff; }
+.color-1 { color: #f87171; }
+.color-2 { color: #86efac; }
+.color-3 { color: #fde047; }
+.color-4 { color: #38bdf8; }
+.color-5 { color: #7dd3fc; }
+.color-6 { color: #e879f9; }
+.color-8 { color: #ef4444; }
+.color-9 { color: #f472b6; }
+
+.gameColor-w { color: #ffffff; }
+.gameColor-r { color: #f87171; }
+.gameColor-g { color: #86efac; }
+.gameColor-y { color: #fde047; }
+.gameColor-b { color: #7dd3fc; }
+
+/* ---------- SINCO-specific message types ---------- */
+.msg-bubble .msg-accent.staff { background: #eab308; }
+.msg-bubble .msg-accent.police { background: #3b82f6; }
+.msg-bubble .msg-accent.faction { background: #f59e0b; }
+.msg-bubble .msg-accent.green { background: #22c55e; }
+.msg-bubble .msg-accent.goodalert { background: #22c55e; }
+
+.msg-bubble.staff { background: rgba(234, 179, 8, 0.35); }
+.msg-bubble.staff-trans { background: rgba(234, 179, 8, 0.2); }
+.msg-bubble.police { background: rgba(59, 130, 246, 0.35); }
+.msg-bubble.police-trans { background: rgba(59, 130, 246, 0.2); }
+.msg-bubble.faction { background: rgba(245, 158, 11, 0.35); }
+.msg-bubble.faction-trans { background: rgba(245, 158, 11, 0.2); }
+.msg-bubble.green { background: rgba(34, 197, 94, 0.35); }
+.msg-bubble.green-trans { background: rgba(34, 197, 94, 0.2); }
